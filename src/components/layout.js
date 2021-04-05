@@ -13,10 +13,7 @@ import Helmet from "react-helmet"
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  let theme;
-  if(localStorage) {
-    theme = localStorage.getItem("theme")
-  }
+  let theme = typeof window !== 'undefined' && localStorage.getItem("theme")
 
   return (
     <>

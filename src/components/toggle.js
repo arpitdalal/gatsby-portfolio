@@ -5,13 +5,10 @@ import './toggle.css'
 const Toggle = () => {
   const lightMode = "light-mode"
   const darkMode = "dark-mode"
-  let theme;
   const [title, setTitle] = useState("Change to light theme")
   const [isChecked, setIsChecked] = useState(false)
 
-  if(localStorage) {
-    theme = localStorage.getItem("theme")
-  }
+  let theme = typeof window !== 'undefined' && localStorage.getItem("theme")
 
   useEffect(() => {
     if(theme === darkMode) {
