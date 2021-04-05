@@ -26,7 +26,7 @@ const Header = () => {
 								className='logo'
 								width={200}
 								height={200}
-								placeholder="tracedSVG"
+								placeholder="blurred"
 							/>
 							<span className="">Arpit Dalal</span>
 						</Navbar.Brand>
@@ -87,7 +87,7 @@ const Header = () => {
 						id='logo-img'
 						height={220}
 						width={220}
-						placeholder="tracedSVG"
+						placeholder="blurred"
 					/>
 				</Link>
 

@@ -14,8 +14,8 @@ const contact = () => {
       <div className="card-body">
         <div id="contactDiv" className="main-div">
           <h1>Get in touch</h1>
-          <p>You have a business that needs web presence or starting one online and want to build a great web experience ffor your customers? Let's work together! Or just say Hi!</p>
-          <form className="contact-form" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience ffor your customers? Let's work together! Or just say Hi!</p>
+          <form action="/thank-you" className="contact-form" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Name<span className="text-danger">*</span></p>
@@ -41,7 +41,7 @@ const contact = () => {
               </label>
             </div>
             <div className="text-left">
-              <button type="submit" class="button submit-button px-4">Send</button>
+              <button type="submit" class="button submit-button px-5 py-2">Send</button>
             </div>
           </form>
           <h4>

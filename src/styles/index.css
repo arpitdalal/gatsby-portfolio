@@ -302,14 +302,14 @@ p+p {
 /* start CTA buttons */
 .cta {
   cursor: pointer;
-  padding: 10px 0;
+  padding: 10px 15px;
   border-radius: 25px;
   background: var(--ad-background);
   color: var(--ad-text) !important;
-  width: 100%;
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
       -3px -3px 6px var(--ad-box-shadow-light);
   margin: 10px;
+  width: 100%;
   transition: background .5s, box-shadow .5s;
 }
 
@@ -326,30 +326,6 @@ p+p {
   color: var(--ad-background) !important;
 }
 /* end CTA buttons */
-
-/* Projects Page styles */
-.special-project {
-  margin-top: 7rem;
-}
-
-a:hover h3 {
-  color: var(--ad-text) !important;
-}
-
-.project {
-  padding: .5rem .5rem inherit;
-}
-
-.light-mode .card .projects img,
-.light-mode .card .project img {
-  box-shadow: 4px 4px 8px rgba(115, 72, 244, .6);
-}
-
-.card .projects img,
-.card .project img {
-  box-shadow: 4px 4px 8px  rgba(189, 95, 255, 0.6);
-}
-/* end of Projects Page styles */
 
 /* grid styles */
 .grid-2 {
@@ -402,5 +378,11 @@ df-messenger {
 
   .special-project {
     margin-top: 2rem;
+  }
+}
+
+@media (max-width:767px) {
+  .cta {
+    width: unset;
   }
 }

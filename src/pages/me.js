@@ -11,13 +11,13 @@ const me = () => {
   return (
     <Layout>
       <SEO title="About Me" />
-      <StaticImage className="card-img-top d-lg-none img-mob" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" placeholder="tracedSVG" />
+      <StaticImage className="card-img-top d-lg-none img-mob" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" placeholder="blurred" />
       <div className="card-body">
         <div id="meDiv" className="main-div">
             <h1 className="text-center">Who am I?</h1>
             <div className="about-me text-left d-flex justify-content-start">
               <div className="about-img-container mr-3">
-                <StaticImage className="d-none d-lg-block img-dk" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" width={300} placeholder="tracedSVG" />
+                <StaticImage className="d-none d-lg-block img-dk" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" width={300} placeholder="blurred" />
               </div>
               <div>
                 <p>Hello<span role="img" aria-label="Waving hand emoticon">👋</span>! My name is Arpit Dalal.</p>
@@ -57,8 +57,8 @@ const me = () => {
           </div>
           <div className="d-block d-lg-none">
             <div className="d-flex flex-column mt-2 cta-div">
-              <Link to="/projects" className="cta cta-primary ">My work</Link>
-              <Link to="/resume" className="cta cta-secondary">My resume</Link>
+              <Link to="/projects" className="cta cta-primary ">Dive into my work</Link>
+              <Link to="/resume" className="cta cta-secondary">Take a look at my resume</Link>
             </div>
           </div>
         </div>

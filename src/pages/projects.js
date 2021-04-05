@@ -2,11 +2,14 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from '../components/layout'
+import Video from '../components/video'
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './projects.css'
 import '../styles/index.css'
 
 const Projects = () => {
+
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark {
@@ -45,11 +48,7 @@ const Projects = () => {
                     <div className="mx-auto">
                       <div className="project-body">
                         <Link className="project-links" to={`/projects/${edge.node.fields.slug}`}>
-                          <img
-                            className="img-fluid rounded"
-                            src={`/${edge.node.frontmatter.gif}`}
-                            alt={`${edge.node.frontmatter.title} gif`}
-                          />
+                          <Video url={`/${edge.node.frontmatter.gif}`}></Video>
                         </Link>
                         <h6 className="mt-3">{edge.node.frontmatter.subtitle}</h6>
                         <div className="d-flex flex-column flex-lg-row justify-content-between">
@@ -65,8 +64,8 @@ const Projects = () => {
           </div>
           <div className="d-block d-lg-none">
             <div className="d-flex flex-column mt-2 cta-div">
-              <Link to="/contact" className="cta cta-primary">Get in touch</Link>
-              <Link to="/resume" className="cta cta-secondary">My resume</Link>
+              <Link to="/contact" className="cta cta-primary">Get in touch with me</Link>
+              <Link to="/resume" className="cta cta-secondary">Take a look at my resume</Link>
             </div>
           </div>
         </div>

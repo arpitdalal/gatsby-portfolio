@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 
 import Layout from '../components/layout'
+import Video from '../components/video'
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.css'
@@ -27,11 +28,7 @@ const Project = ({ data }) => {
       <div className="card-body">
         <div className="main-div project">
           <h1>{data.markdownRemark.frontmatter.title}</h1>
-          <img
-            className="img-fluid rounded"
-            src={`/${data.markdownRemark.frontmatter.gif}`}
-            alt={`${data.markdownRemark.frontmatter.gif} gif`}
-          />
+          <Video url={`/${data.markdownRemark.frontmatter.gif}`}></Video>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
           <div className="d-flex flex-column flex-lg-row mt-2">
             <Link to={data.markdownRemark.frontmatter.url} rel="noopener noreferrer nofollow" className="cta cta-primary" target="_blank">Go to site</Link>
