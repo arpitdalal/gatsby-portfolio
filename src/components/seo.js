@@ -19,6 +19,12 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            ogURL
+            ogImg
+            ogWidth
+            ogHeight
+            twitterImg
           }
         }
       }
@@ -27,6 +33,12 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const keywords = site.siteMetadata?.keywords
+  const ogURL = site.siteMetadata?.ogURL
+  const ogImg = site.siteMetadata?.ogImg
+  const ogWidth = site.siteMetadata?.ogWidth
+  const ogHeight = site.siteMetadata?.ogHeight
+  const twitterImg = site.siteMetadata?.twitterImg
 
   return (
     <Helmet
@@ -41,6 +53,22 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `robots`,
+          content: `index, follow`,
+        },
+        {
+          property: `keywords`,
+          content: keywords,
+        },
+        {
+          property: `og:locale`,
+          content: `en_US`,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -49,12 +77,24 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: `og:url`,
+          content: ogURL,
+        },
+        {
+          property: `og:image`,
+          content: ogImg,
+        },
+        {
+          property: `og:width`,
+          content: ogWidth,
+        },
+        {
+          property: `og:height`,
+          content: ogHeight,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -67,6 +107,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: twitterImg,
         },
       ].concat(meta)}
     />

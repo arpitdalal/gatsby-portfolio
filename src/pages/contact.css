@@ -1,0 +1,47 @@
+.contact-form {
+  padding: 2rem 10rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: var(--ad-text);
+  padding: .4rem 1rem;
+  width: 100%;
+  border-radius: 25px;
+  background: var(--ad-background);
+  box-shadow: 4px 4px 8px var(--ad-box-shadow-dark),
+      -4px -4px 8px var(--ad-box-shadow-light);
+  border: none;
+  transition: background .5s, box-shadow .5s;
+  -webkit-appearance: none; /* safari fix */
+}
+
+.contact-form input:active,
+.contact-form textarea:active {
+  outline: 0;
+  border: 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: inset 3px 3px 6px var(--ad-box-shadow-dark),
+      inset -3px -3px 6px var(--ad-box-shadow-light);
+  outline: 0;
+  border: 0;
+}
+
+#contactDiv .social-links {
+  max-width: 300px;
+}
+
+#contactDiv .bmc-btn-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* responsive styles */
+@media (max-width:991px) {
+  .contact-form {
+    padding: 2rem .8rem;
+  }
+}

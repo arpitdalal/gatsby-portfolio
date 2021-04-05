@@ -1,8 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Arpit Dalal - A full stack web developer`,
+    description: `A full stack web developer's portfolio with projects on react.js, node.js, gatsby.js, javascript, php, wordpress, laravel, and many more technologies`,
+    author: `@ArpitDalal6`,
+    keywords: `PORTFOLIO, WEB DEVELOPER, JAVASCRIPT, ARPIT, DALAL, ARPIT DALAL, DEVELOPER, WEBSITE, NODEJS, REACT`,
+    ogURL: `http://arpitdalal.dev/`,
+    ogImg: `/og-logo-img.png`,
+    ogWidth: `1200`,
+    ogHeight: `600`,
+    twitterImg: `/twitter-card-img.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,23 +20,43 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        plugins: [
+          'gatsby-remark-static-images'
+        ],
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-5ZM6B4C",
+  
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: function () {
+          return {
+            pageType: window.pageType,
+          }
+        }
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

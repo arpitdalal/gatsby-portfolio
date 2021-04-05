@@ -1,0 +1,125 @@
+.toggle-label-dk {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #394a56;
+}
+
+.toggle-label-dk .toggle {
+  isolation: isolate;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border: 1px solid var(--ad-text);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  box-shadow: inset 3px 3px 3px var(--ad-box-shadow-dark),
+      inset -3px -3px 3px var(--ad-box-shadow-light),
+      3px 3px 3px var(--ad-box-shadow-dark),
+      -3px -3px 3px var(--ad-box-shadow-light);
+}
+
+.toggle-label-dk .toggle-state {
+  display: none;
+}
+
+.toggle-label-dk .indicator {
+  height: 100%;
+  width: 200%;
+  background: var(--ad-text);
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35), box-shadow 0.5s, background 0.5s;
+  box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
+      -6px -6px 12px var(--ad-box-shadow-light);
+}
+
+.toggle-label-dk .toggle-state:checked~.indicator {
+  transform: translate3d(25%, 0, 0);
+}
+
+.toggle-label-dk .indicator2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: var(--ad-background);
+  border-radius: 15px;
+  transform: translate3d(18%, -20%, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35), background .5s;
+  z-index: 1
+}
+
+.toggle-label-dk .toggle-state:checked~.indicator2 {
+  opacity: 0;
+}
+
+/* start mobile toggle */
+.toggle-label-mb {
+  margin: 10px 0 0 15px;
+  cursor: pointer;
+  color: #394a56;
+  display: flex;
+  align-items: center;
+}
+
+#toggle-title {
+  transition: .5s;
+  color: var(--ad-text);
+  margin-right: 10px;
+}
+
+.toggle-label-mb .toggle {
+  isolation: isolate;
+  position: relative;
+  height: 20px;
+  width: 39px;
+  border: 1px solid var(--ad-text);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  box-shadow: inset 3px 3px 3px var(--ad-box-shadow-dark),
+      inset -3px -3px 3px var(--ad-box-shadow-light),
+      3px 3px 3px var(--ad-box-shadow-dark),
+      -3px -3px 3px var(--ad-box-shadow-light);
+}
+
+.toggle-label-mb .toggle-state {
+  display: none;
+}
+
+.toggle-label-mb .indicator {
+  height: 100%;
+  width: 200%;
+  background: var(--ad-text);
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35), box-shadow 0.5s, background 0.5s;
+  box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
+      -6px -6px 12px var(--ad-box-shadow-light);
+}
+
+.toggle-label-mb .toggle-state:checked~.indicator {
+  transform: translate3d(25%, 0, 0);
+}
+
+.toggle-label-mb .indicator2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  background: var(--ad-background);
+  border-radius: 15px;
+  transform: translate3d(7%, -20%, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  z-index: 1
+}
+
+.toggle-label-mb .toggle-state:checked~.indicator2 {
+  opacity: 0;
+}
+/* end mobile toggle */

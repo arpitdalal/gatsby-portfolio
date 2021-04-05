@@ -7,43 +7,38 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import favicon from '../images/favicon.ico'
+import Helmet from "react-helmet"
 
 import Header from "./header"
-import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  let theme;
+  if(localStorage) {
+    theme = localStorage.getItem("theme")
+  }
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      <div className={`main ${theme}`}>
+        <div className="my-container">
+          <div className="row mx-0">
+            <div className="col-lg-4 col-xl-3 left-div">
+              <Header />
+            </div>
+            <div className="col-lg-8 col-xl-9 right-div">
+              <div className="card">{children}</div>
+            </div>
+          </div>
+        </div>
       </div>
+      <Helmet>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" defer async></script>
+      </Helmet>
+      <df-messenger intent="WELCOME" chat-title="Arpit's info bot" chat-icon="/bot.png" agent-id="ac73d5ad-b388-4a66-97af-33832605e098" language-code="en"></df-messenger>
     </>
   )
 }
