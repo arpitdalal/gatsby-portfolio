@@ -1,92 +1,26 @@
 import React from 'react'
-import { navigate } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Form from '../components/form'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.css'
 import './contact.css'
 
 const Contact = () => {
-  // This function encodes the captured form data in the format that Netlify's backend requires
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
-
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  })
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (event) => {
-    // Prevent the default onSubmit behavior
-    event.preventDefault();
-    // POST the encoded form with the content-type header that's required for a text submission
-    // Note that the header will be different for POSTing a file
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ 
-        "form-name": event.target.getAttribute("name"),
-        ...formData
-      })
-    })
-      // On success, redirect to the custom success page using Gatsby's `navigate` helper function
-      .then(() => navigate("/thank-you/"))
-      // On error, show the error in an alert
-      .catch(error => alert(error));
-  };
-
   return (
     <Layout>
       <SEO title="Contact Me" />
       <div className="card-body">
         <div id="contactDiv" className="main-div">
           <h1>Get in touch</h1>
-          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience for your customers? Let's work together! Or just say Hi!</p>
-
-          <form data-netlify="true" action="/thank-you" data-netlify-recaptcha="true" className="contact-form" name="contact-form" method="POST" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact-form" />
-            <div className="w-100 mt-2">
-              <label className="w-100">
-                <p className="text-left mb-1">Name<span className="text-danger">*</span></p>
-                <input type="text" name="name" className="w-100" onChange={handleChange} value={formData.name}></input>
-              </label>
-            </div>
-            <div className="w-100 mt-2">
-              <label className="w-100">
-                <p className="text-left mb-1">Email<span className="text-danger">*</span></p>
-                <input type="email" name="email" className="w-100" onChange={handleChange} value={formData.email}></input>
-              </label>
-            </div>
-            <div className="w-100 mt-2">
-              <label className="w-100">
-                <p className="text-left mb-1">Phone Number</p>
-                <input type="number" name="phone" className="w-100" onChange={handleChange} value={formData.phone}></input>
-              </label>
-            </div>
-            <div className="w-100 mt-2">
-              <label className="w-100">
-                <p className="text-left mb-1">Message<span className="text-danger">*</span></p>
-                <textarea name="message" className="w-100" rows="5" onChange={handleChange}>{formData.message}</textarea>
-              </label>
-            </div>
-            <div className="text-left">
-              <button type="submit" class="button submit-button px-5 py-2">Send</button>
-            </div>
-          </form>
+          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience htmlFor your customers? Let's work together! Or just say Hi!</p>
+          
+          <Form />
+          
           <h4>
-            Or reach me out at 
-            <a className="purple" href="mailto:arpit@arpitdalal.dev">arpit@arpitdalal.dev</a>
+            Or reach me out at <a className="purple" href="mailto:arpit@arpitdalal.dev">arpit@arpitdalal.dev</a>
           </h4>
 
           <h4 className=" mt-4">If you like what I do, support me by buying me a coffee.</h4>
@@ -116,7 +50,7 @@ const Contact = () => {
           <div className=" social-links mx-auto d-lg-none d-xl-none">
             <a href="https://github.com/arpitdalal" rel="noopener noreferrer" className="social-link github" target="_blank">
               <span className="svg-bg">
-                <svg viewBox="0 0 24 24" width={24} height={24} stroke="transparent" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width={24} height={24} stroke="transparent" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path
                     d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                   </path>
@@ -126,7 +60,7 @@ const Contact = () => {
             </a>
             <a href="https://linkedin.com/in/arpitdalal/" rel="noopener noreferrer" className="social-link linkedin" target="_blank">
               <span className="svg-bg">
-                <svg viewBox="0 0 24 24" width={24} height={24} stroke="transparent" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width={24} height={24} stroke="transparent" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path
                     d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                   </path>
@@ -138,7 +72,7 @@ const Contact = () => {
             </a>
             <a href="https://codepen.io/arpitdalalm" rel="noopener noreferrer" className="social-link codepen" target="_blank">
               <span className="svg-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-codepen">
+                <svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-codepen">
                   <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
                   <line x1="12" y1="22" x2="12" y2="15.5"></line>
                   <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
