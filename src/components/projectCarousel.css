@@ -1,0 +1,8 @@
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--ad-highlight);
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: var(--ad-highlight);
+}
