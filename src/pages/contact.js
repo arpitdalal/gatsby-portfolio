@@ -8,18 +8,23 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.css'
 import './contact.css'
 
-// This function encodes the captured form data in the format that Netlify's backend requires
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 const Contact = () => {
-  const [formData, setFormData] = React.useState('')
+  // This function encodes the captured form data in the format that Netlify's backend requires
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  })
 
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: [e.target.value]})
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = (event) => {
@@ -48,6 +53,7 @@ const Contact = () => {
         <div id="contactDiv" className="main-div">
           <h1>Get in touch</h1>
           <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience for your customers? Let's work together! Or just say Hi!</p>
+
           <form data-netlify="true" action="/thank-you" data-netlify-recaptcha="true" className="contact-form" name="contact-form" method="POST" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact-form" />
             <div className="w-100 mt-2">
@@ -65,7 +71,7 @@ const Contact = () => {
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Phone Number</p>
-                <input type="number" name="phone-number" className="w-100" onChange={handleChange} value={formData.phone}></input>
+                <input type="number" name="phone" className="w-100" onChange={handleChange} value={formData.phone}></input>
               </label>
             </div>
             <div className="w-100 mt-2">
