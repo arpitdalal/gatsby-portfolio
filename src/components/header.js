@@ -7,7 +7,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 
 import './header.css';
 
-const Header = () => {
+const Header = ({ setTheme }) => {
 	const [toggleClass, setToggleClass] = useState(false)
 
 	const handleToggleClick = () => {
@@ -69,7 +69,7 @@ const Header = () => {
 										<span className="bmc-btn-text">Buy me a coffee</span>
 									</a>
 								</div>
-								<Toggle />
+								<Toggle setTheme={setTheme} />
 							</Nav>
 						</Navbar.Collapse>
 					</Navbar>
@@ -77,7 +77,7 @@ const Header = () => {
 			</div>
 			
 			<div className='card mx-auto d-none d-lg-block' id='main-card'>
-				<Toggle />
+				<Toggle setTheme={setTheme} />
 
 				<Link to='/'>
 					<StaticImage

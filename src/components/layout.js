@@ -1,11 +1,4 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import favicon from '../images/favicon.ico'
 import Helmet from "react-helmet"
@@ -13,18 +6,23 @@ import Helmet from "react-helmet"
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  let theme = typeof window !== 'undefined' ? localStorage.getItem("theme") : ''
+  const [theme, setTheme] = useState('')
+
+  useEffect(() => {
+    setTheme(typeof window !== 'undefined' ? localStorage.getItem('theme') : '')
+  }, [theme])
 
   return (
     <>
       <Helmet>
         <link rel="icon" href={favicon} />
+        <body className={theme} />
       </Helmet>
-      <div className={`main ${theme}`}>
+      <div className="main">
         <div className="my-container">
           <div className="row mx-0">
             <div className="col-lg-4 col-xl-3 left-div">
-              <Header />
+              <Header setTheme={setTheme} />
             </div>
             <div className="col-lg-8 col-xl-9 right-div">
               <div className="card">{children}</div>

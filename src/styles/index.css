@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro&family=Cookie&display=swap');
 
-.main.light-mode {
+body {
   --ad-highlight: #7348f4;
   --ad-text: #0d0d0d;
   --ad-background: #eff0f3;
@@ -13,7 +13,7 @@
   --ad-card-shadow: 0 4px 8px 0 rgb(179, 179, 179), 0 6px 20px 0 rgb(179, 179, 179);
 }
 
-.main {
+body.dark-mode {
   --ad-highlight: #bd5fff;
   --ad-text: #e6e6e6;
   --ad-background: #16161a;
@@ -24,6 +24,9 @@
   --ad-icon: #bd5fff;
   --ad-icon-background: #fffffe;
   --ad-card-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
+}
+
+.main {
   background: var(--ad-background);
   color: var(--ad-text) !important;
   transition: background .5s, box-shadow.5s;
