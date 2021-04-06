@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
-  branch: master
+  repo: arpitdalal/gatsby-portfolio
+  branch: main
 
 media_folder: static/
 public_folder: /
