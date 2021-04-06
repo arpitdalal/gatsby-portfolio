@@ -41,7 +41,7 @@ const Projects = () => {
             <div className="grid-2">
               {data.allMarkdownRemark.edges.map((edge, index) => {
                 return(
-                  <div className={`project ${index%2!==0 && 'special-project'}`}>
+                  <div className={`project ${index%2!==0 && 'special-project'}`} key={index}>
                     <Link to={`/projects/${edge.node.fields.slug}`}>
                       <h3>{edge.node.frontmatter.title}</h3>
                     </Link>

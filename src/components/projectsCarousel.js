@@ -41,15 +41,13 @@ const ProjectsCarousel = () => {
       >
         {data.allMarkdownRemark.edges.map((edge, index) => {
           return(
-            <div>
-              <SwiperSlide key={index}>
-                <div className="swiper-scrollbar"></div>
-                <Link className="project-links" to={`/projects/${edge.node.fields.slug}`}>
-                  <Video className="rounded" url={`/${edge.node.frontmatter.gif}`}></Video>
-                  <h4 className="mt-2">{edge.node.frontmatter.title}</h4>
-                </Link>
-              </SwiperSlide>
-            </div>
+            <SwiperSlide key={index}>
+              <div className="swiper-scrollbar"></div>
+              <Link className="project-links" to={`/projects/${edge.node.fields.slug}`}>
+                <Video className="rounded" url={`/${edge.node.frontmatter.gif}`}></Video>
+                <h4 className="mt-2">{edge.node.frontmatter.title}</h4>
+              </Link>
+            </SwiperSlide>
           )
         })}
       </Swiper>

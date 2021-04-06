@@ -1,15 +1,18 @@
 import React from "react"
 
-import * as LottiePlayer from "@lottiefiles/lottie-player";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectsCarousel from "../components/projectsCarousel"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.css'
+import { Helmet } from "react-helmet"
 
 const IndexPage = () =>  (
   <Layout>
     <SEO title="Home" />
+    <Helmet>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </Helmet>
     <div className="card-body text-left">
       <div className="row">
         <div className="col-lg-6">
