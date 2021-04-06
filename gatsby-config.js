@@ -28,7 +28,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaultQuality: 90
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -56,7 +61,8 @@ module.exports = {
             pageType: window.pageType,
           }
         }
-      },
+      }
     },
+    `gatsby-plugin-netlify-cms`
   ],
 }
