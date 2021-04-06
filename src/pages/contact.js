@@ -1,43 +1,77 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.css'
 import './contact.css'
 
+// This function encodes the captured form data in the format that Netlify's backend requires
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
-const contact = () => {
+const Contact = () => {
+  const [formData, setFormData] = React.useState('')
+
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: [e.target.value]})
+  }
+
+  const handleSubmit = (event) => {
+    // Prevent the default onSubmit behavior
+    event.preventDefault();
+    // POST the encoded form with the content-type header that's required for a text submission
+    // Note that the header will be different for POSTing a file
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ 
+        "form-name": event.target.getAttribute("name"),
+        ...formData
+      })
+    })
+      // On success, redirect to the custom success page using Gatsby's `navigate` helper function
+      .then(() => navigate("/thank-you/"))
+      // On error, show the error in an alert
+      .catch(error => alert(error));
+  };
+
   return (
     <Layout>
       <SEO title="Contact Me" />
       <div className="card-body">
         <div id="contactDiv" className="main-div">
           <h1>Get in touch</h1>
-          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience ffor your customers? Let's work together! Or just say Hi!</p>
-          <form action="/thank-you" className="contact-form" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience for your customers? Let's work together! Or just say Hi!</p>
+          <form data-netlify="true" action="/thank-you" data-netlify-recaptcha="true" className="contact-form" name="contact-form" method="POST" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact-form" />
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Name<span className="text-danger">*</span></p>
-                <input type="text" name="name" className="w-100"></input>
+                <input type="text" name="name" className="w-100" onChange={handleChange} value={formData.name}></input>
               </label>
             </div>
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Email<span className="text-danger">*</span></p>
-                <input type="email" name="email" className="w-100"></input>
+                <input type="email" name="email" className="w-100" onChange={handleChange} value={formData.email}></input>
               </label>
             </div>
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Phone Number</p>
-                <input type="text" name="phone-number" className="w-100"></input>
+                <input type="number" name="phone-number" className="w-100" onChange={handleChange} value={formData.phone}></input>
               </label>
             </div>
             <div className="w-100 mt-2">
               <label className="w-100">
                 <p className="text-left mb-1">Message<span className="text-danger">*</span></p>
-                <textarea name="message" className="w-100" rows="5"></textarea>
+                <textarea name="message" className="w-100" rows="5" onChange={handleChange}>{formData.message}</textarea>
               </label>
             </div>
             <div className="text-left">
@@ -115,4 +149,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
