@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Video from '../components/video'
 import 'swiper/swiper-bundle.css'
 import './projectCarousel.css'
+import { StaticImage } from 'gatsby-plugin-image';
 
 SwiperCore.use([Navigation, Pagination, A11y]);
 
@@ -50,6 +51,19 @@ const ProjectsCarousel = () => {
             </SwiperSlide>
           )
         })}
+        <SwiperSlide>
+          <div className="swiper-scrollbar"></div>
+          <Link className="project-links" to="/projects/">
+            <StaticImage 
+              src="../images/billboard.jpg"
+              alt="billboard image"
+              height={446}
+              width={881}
+              placeholder="blurred"
+            />
+            <h4 className="mt-2">All Projects</h4>
+          </Link>
+        </SwiperSlide>
       </Swiper>
     </>
   )

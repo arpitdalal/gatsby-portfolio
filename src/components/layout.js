@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <link rel="icon" href={favicon} />
         <body className={theme} />
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Helmet>
       <div className="main">
         <div className="my-container">
