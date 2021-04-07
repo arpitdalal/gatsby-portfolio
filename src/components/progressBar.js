@@ -29,7 +29,7 @@ const ProgressBar = ({ title, completed }) => {
     }
   `;
 
-  injectStyle(keyframesStyle);
+  typeof window !== 'undefined' && injectStyle(keyframesStyle)
 
   return (
     <div className="bar-div">
