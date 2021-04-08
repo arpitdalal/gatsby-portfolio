@@ -154,10 +154,6 @@ p+p {
   color: #e6e6e6 !important;
 }
 
-.w-50 {
-  width: 50%;
-}
-
 .purple {
   color: var(--ad-highlight) !important;
 }
@@ -309,11 +305,14 @@ p+p {
   border-radius: 25px;
   background: var(--ad-background);
   color: var(--ad-text) !important;
+  flex-grow: 1;
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
       -3px -3px 6px var(--ad-box-shadow-light);
-  margin: 10px;
-  width: 100%;
   transition: background .5s, box-shadow .5s;
+}
+
+.cta + .cta {
+  margin-left: 1rem;
 }
 
 .cta.cta-primary {
@@ -368,6 +367,11 @@ df-messenger {
 
   .project+.project {
     margin-top: 2rem;
+  }
+
+  .cta + .cta {
+    margin-left: 0;
+    margin-top: 1rem;
   }
 
   .grid-2 {

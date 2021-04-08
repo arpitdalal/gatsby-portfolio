@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-
-import Toggle from './toggle'
 import { Navbar, Nav } from 'react-bootstrap'
+
+import ToggleMobile from './toggleMobile'
+import ToggleDesktop from './toggleDesktop'
 
 import './header.css';
 
@@ -69,7 +70,7 @@ const Header = ({ setTheme }) => {
 										<span className="bmc-btn-text">Buy me a coffee</span>
 									</a>
 								</div>
-								<Toggle setTheme={setTheme} />
+								<ToggleMobile setTheme={setTheme} />
 							</Nav>
 						</Navbar.Collapse>
 					</Navbar>
@@ -77,7 +78,7 @@ const Header = ({ setTheme }) => {
 			</div>
 			
 			<div className='card mx-auto d-none d-lg-block' id='main-card'>
-				<Toggle setTheme={setTheme} />
+				<ToggleDesktop setTheme={setTheme} />
 
 				<Link to='/'>
 					<StaticImage

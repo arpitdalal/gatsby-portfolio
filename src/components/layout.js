@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   const [theme, setTheme] = useState('')
 
   useEffect(() => {
-    setTheme(typeof window !== 'undefined' ? localStorage.getItem('theme') : '')
+    setTheme(typeof window !== 'undefined' ? localStorage.getItem('theme') : 'light-mode')
   }, [theme])
 
   return (
@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
       <Helmet>
         <link rel="icon" href={favicon} />
         <body className={theme} />
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Helmet>
       <div className="main">
         <div className="my-container">
@@ -31,9 +30,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-      <Helmet>
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" defer async></script>
-      </Helmet>
       <df-messenger intent="WELCOME" chat-title="Arpit's info bot" chat-icon="/bot.png" agent-id="ac73d5ad-b388-4a66-97af-33832605e098" language-code="en"></df-messenger>
     </>
   )

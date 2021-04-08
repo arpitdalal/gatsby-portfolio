@@ -59,6 +59,10 @@
 }
 
 /* start mobile navigation */
+.mobile .fixed-top {
+  z-index: 90 !important;
+}
+
 .mobile .navbar {
   transition: .5s;
   background: var(--ad-background);
