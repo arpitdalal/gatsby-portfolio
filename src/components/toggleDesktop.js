@@ -3,16 +3,16 @@ import React, { useState, useEffect, useRef } from 'react'
 import './toggle.css'
 
 const Toggle = ({ setTheme }) => {
-  const lightMode = "light-mode"
-  const darkMode = "dark-mode"
   const [title, setTitle] = useState("Change to dark theme")
   const [isChecked, setIsChecked] = useState(true)
   let theme = useRef();
 
   useEffect(() => {
-    typeof window !== 'undefined' &&
-      (theme.current = document.querySelector('body').classList.contains('dark-mode') ? 'dark-mode' : 'light-mode')
-    if(theme.current === darkMode) {
+    if(typeof window !== 'undefined')
+      if(localStorage.getItem('theme'))
+        theme.current = localStorage.getItem('theme') === 'dark-mode' ? 'dark-mode' : 'light-mode'
+    
+    if(theme.current === 'dark-mode') {
       setTitle("Change to light theme")
       setIsChecked(false)
     } else {
@@ -26,13 +26,13 @@ const Toggle = ({ setTheme }) => {
       setIsChecked(true)
       setTitle("Change to dark theme")
       localStorage.setItem("theme", "light-mode")
-      theme.current = lightMode
+      theme.current = 'light-mode'
       setTheme(theme.current)
     } else {
       setIsChecked(false)
       setTitle("Change to light theme")
       localStorage.setItem("theme", "dark-mode")
-      theme.current = darkMode
+      theme.current = 'dark-mode'
       setTheme(theme.current)
     }
   }

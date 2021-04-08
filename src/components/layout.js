@@ -6,10 +6,12 @@ import Helmet from "react-helmet"
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState('')
+  const [theme, setTheme] = useState('light-mode')
 
   useEffect(() => {
-    setTheme(typeof window !== 'undefined' ? localStorage.getItem('theme') : 'light-mode')
+    if(typeof window !== 'undefined')
+      if(localStorage.getItem('theme'))
+      setTheme(localStorage.getItem('theme') === 'dark-mode' ? 'dark-mode' : 'light-mode')
   }, [theme])
 
   return (
