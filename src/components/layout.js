@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import favicon from '../images/favicon.ico'
 import Helmet from "react-helmet"
+import gsap from 'gsap'
 
 import Header from "./header"
 
@@ -14,6 +15,25 @@ const Layout = ({ children }) => {
       setTheme(localStorage.getItem('theme') === 'dark-mode' ? 'dark-mode' : 'light-mode')
   }, [theme])
 
+  useEffect(() => {
+		let tl = gsap.timeline({ duration: 0.05 });
+    const mediaQuery = window.matchMedia("(max-width: 991px)");
+    if(mediaQuery.matches) {
+      tl
+        .from('.left-div', { y: -10, opacity: 0 })
+        .from('.right-div', { y: -10, opacity: 0 })
+        .from('.toggle-label', { scale: 0, opacity: 0 })
+        .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
+     
+    } else {
+      tl
+        .from('.left-div', { x: -10, opacity: 0 })
+        .from('.right-div', { x: +10, opacity: 0 })
+        .from('.toggle-label', { scale: 0, opacity: 0 })
+        .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
+    }
+  })
+
   return (
     <>
       <Helmet>
@@ -23,7 +43,7 @@ const Layout = ({ children }) => {
       <div className="main">
         <div className="my-container">
           <div className="row mx-0">
-            <div className="col-lg-4 col-xl-3 left-div">
+            <div className="col-lg-4 col-xl-3 left-div" style={{zIndex:10}}>
               <Header setTheme={setTheme} />
             </div>
             <div className="col-lg-8 col-xl-9 right-div">

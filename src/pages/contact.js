@@ -14,17 +14,18 @@ const Contact = () => {
       <SEO title="Contact Me" />
       <div className="card-body">
         <div id="contactDiv" className="main-div">
-          <h1>Get in touch</h1>
-          <p className="px-5">You have a business that needs web presence or starting one online and want to build a great web experience htmlFor your customers? Let's work together! Or just say Hi!</p>
+          <h1 className="anim">Get in touch</h1>
+          <p className="px-5 anim">You have a business that needs web presence or starting one online and want to build a great web experience for your customers?</p>
+          <p>Let's work together! Or just say Hi!</p>
           
           <Form />
           
-          <h4>
+          <h4 className="anim">
             Or reach me out at <a className="purple" href="mailto:arpit@arpitdalal.dev">arpit@arpitdalal.dev</a>
           </h4>
 
-          <h4 className=" mt-4">If you like what I do, support me by buying me a coffee.</h4>
-          <div className="bmc-btn-container mx-auto">
+          <h4 className=" mt-4 anim">If you like what I do, support me by buying me a coffee.</h4>
+          <div className="bmc-btn-container mx-auto anim">
             <a className="bmc-btn" rel="noopener noreferrer" target="_blank" href="http://buymeacoffee.com/arpitdalal">
               <svg width={40} height={40} viewBox="0 0 884 1279" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z" fill="#0D0C22"></path>

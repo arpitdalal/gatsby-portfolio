@@ -20,6 +20,6 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
       },
     }),
     <script defer async src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>,
-    <script defer async src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" defer async></script>
+    <script defer async src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   ])
 }

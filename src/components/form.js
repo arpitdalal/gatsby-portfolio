@@ -55,7 +55,7 @@ const Form = () => {
             <div id="cid_5" className="form-input">
               <span className="form-sub-label-container" style={{verticalAlign: "top"}}>
                 <input type="tel" id="input_5_full" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="q5_phoneNumber" className="form-textbox validate[Fill Mask]" autoComplete="off" onChange={handleChange} value={formData.q5_phoneNumber} data-component="phone" aria-labelledby="label_5" placeholder="123-456-7890" />
-                <label class="form-sub-label text-muted small" for="input_5_full" id="sublabel_5_masked" style={{minHeight: "13px"}} aria-hidden="false">Format: 123-456-7890</label>
+                <label className="form-sub-label text-muted small" htmlFor="input_5_full" id="sublabel_5_masked" style={{minHeight: "13px"}} aria-hidden="false">Format: 123-456-7890</label>
               </span>
             </div>
           </li>

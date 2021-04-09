@@ -17,7 +17,7 @@ const Header = ({ setTheme }) => {
 
 	return (
 		<header>
-			<div className="mobile d-block d-lg-none">
+			<div className="mobile mobile-header d-block d-lg-none">
 				<div className="d-flex flex-column container-div">
 					<Navbar expand="lg" className="w-100 fixed-top">
 						<Navbar.Brand href="/" className="d-flex flex-row align-items-center">
@@ -77,14 +77,13 @@ const Header = ({ setTheme }) => {
 				</div>
 			</div>
 			
-			<div className='card mx-auto d-none d-lg-block' id='main-card'>
+			<div className='card desktop-header mx-auto d-none d-lg-block' id='main-card'>
 				<ToggleDesktop setTheme={setTheme} />
-
 				<Link to='/'>
 					<StaticImage
 						src='../images/logo.png'
 						alt="Arpit Dalal Logo"
-						className='header-img-logo'
+						className='header-img-logo anim'
 						id='logo-img'
 						height={220}
 						width={220}
@@ -94,92 +93,92 @@ const Header = ({ setTheme }) => {
 
 				<div className='card-body pt-0'>
 					<Link to='/' className='head'>
-						<h2 className='card-title heading'>Arpit Dalal</h2>
+						<h2 className='card-title heading anim'>Arpit Dalal</h2>
 					</Link>
-					<h3 className='card-sub-title mt-2'>Web developer</h3>
-					<div className='social-links'>
-						<a
-							href='https://github.com/arpitdalal'
-							rel='noopener noreferrer'
-							className='social-link github'
-							target='_blank'
-						>
-							<span className='svg-bg'>
-								<svg
-									viewBox='0 0 24 24'
-									width={24}
-									height={24}
-									stroke='transparent'
-									strokeWidth='2'
-									fill='none'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								>
-									<path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22' />
-								</svg>
-							</span>
-							Github
-						</a>
-						<a
-							href='https://linkedin.com/in/arpitdalal/'
-							rel='noopener noreferrer'
-							className='social-link linkedin'
-							target='_blank'
-						>
-							<span className='svg-bg'>
-								<svg
-									viewBox='0 0 24 24'
-									width={24}
-									height={24}
-									stroke='transparent'
-									strokeWidth='2'
-									fill='none'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								>
-									<path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' />
-									<rect x='2' y='9' width={4} height={12} />
-									<circle cx='4' cy='4' r='2' />
-								</svg>
-							</span>
-							LinkedIn
-						</a>
-						<a
-							href='https://codepen.io/arpitdalalm'
-							rel='noopener noreferrer'
-							className='social-link codepen'
-							target='_blank'
-						>
-							<span className='svg-bg'>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									height={24}
-									width={24}
-									viewBox='0 0 24 24'
-									fill='none'
-									stroke='currentColor'
-									strokeWidth='2'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									className='feather feather-codepen'
-								>
-									<polygon points='12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2' />
-									<line x1='12' y1='22' x2='12' y2='15.5' />
-									<polyline points='22 8.5 12 15.5 2 8.5' />
-									<polyline points='2 15.5 12 8.5 22 15.5' />
-									<line x1='12' y1='2' x2='12' y2='8.5' />
-								</svg>
-							</span>
-							Codepen
-						</a>
-					</div>
+						<h3 className='card-sub-title mt-2 anim'>Web developer</h3>
+						<div className='social-links anim'>
+							<a
+								href='https://github.com/arpitdalal'
+								rel='noopener noreferrer'
+								className='social-link github'
+								target='_blank'
+							>
+								<span className='svg-bg'>
+									<svg
+										viewBox='0 0 24 24'
+										width={24}
+										height={24}
+										stroke='transparent'
+										strokeWidth='2'
+										fill='none'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+									>
+										<path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22' />
+									</svg>
+								</span>
+								Github
+							</a>
+							<a
+								href='https://linkedin.com/in/arpitdalal/'
+								rel='noopener noreferrer'
+								className='social-link linkedin'
+								target='_blank'
+							>
+								<span className='svg-bg'>
+									<svg
+										viewBox='0 0 24 24'
+										width={24}
+										height={24}
+										stroke='transparent'
+										strokeWidth='2'
+										fill='none'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+									>
+										<path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' />
+										<rect x='2' y='9' width={4} height={12} />
+										<circle cx='4' cy='4' r='2' />
+									</svg>
+								</span>
+								LinkedIn
+							</a>
+							<a
+								href='https://codepen.io/arpitdalalm'
+								rel='noopener noreferrer'
+								className='social-link codepen'
+								target='_blank'
+							>
+								<span className='svg-bg'>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										height={24}
+										width={24}
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										className='feather feather-codepen'
+									>
+										<polygon points='12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2' />
+										<line x1='12' y1='22' x2='12' y2='15.5' />
+										<polyline points='22 8.5 12 15.5 2 8.5' />
+										<polyline points='2 15.5 12 8.5 22 15.5' />
+										<line x1='12' y1='2' x2='12' y2='8.5' />
+									</svg>
+								</span>
+								Codepen
+							</a>
+						</div>
 					<div className='nav-bar'>
 						<div className='nav flex-column nav-pills' id='v-pills-tab' role='tablist'>
-							<Link className='nav-link' activeClassName="active" role='tab' to="/me">Who am I?</Link>
-							<Link className='nav-link' activeClassName="active" role='tab' to="/projects">My Work</Link>
-							<Link className='nav-link' activeClassName="active" role='tab' to="/contact">Get in touch</Link>
-							<Link className='nav-link' activeClassName="active" role='tab' to="/resume">My Resume</Link>
-							<div className='bmc-btn-container'>
+							<Link className='nav-link anim' activeClassName="active" role='tab' to="/me">Who am I?</Link>
+							<Link className='nav-link anim' activeClassName="active" role='tab' to="/projects">My Work</Link>
+							<Link className='nav-link anim' activeClassName="active" role='tab' to="/contact">Get in touch</Link>
+							<Link className='nav-link anim' activeClassName="active" role='tab' to="/resume">My Resume</Link>
+							<div className='bmc-btn-container anim'>
 								<a
 									className='bmc-btn'
 									rel='noopener noreferrer'

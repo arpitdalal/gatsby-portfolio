@@ -35,13 +35,13 @@ const Projects = () => {
       <SEO title="My Work" />
       <div className="card-body">
         <div id="projectsDiv" className="main-div">
-          <h1>My work</h1>
-          <h5 className="mt-3">Here's a glimpse of my projects.</h5>
+          <h1 className="anim">My work</h1>
+          <h5 className="mt-3 anim">Here's a glimpse of my projects.</h5>
           <div className="projects my-5">
             <div className="grid-2">
               {data.allMarkdownRemark.edges.map((edge, index) => {
                 return(
-                  <div className={`project ${index%2!==0 && 'special-project'}`} key={index}>
+                  <div className={`project anim ${index%2!==0 && 'special-project'}`} key={index}>
                     <Link to={`/projects/${edge.node.fields.slug}`}>
                       <h3>{edge.node.frontmatter.title}</h3>
                     </Link>
