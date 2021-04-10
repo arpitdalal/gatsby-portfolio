@@ -1,8 +1,8 @@
 ---
-title: "Atmiya Premiere League"
-subtitle: "A web platform for a sports league."
-url: "http://apl.epizy.com/"
-gif: "apl.webm"
+title: Atmiya Premiere League 2020
+subtitle: A web platform for a sports league.
+url: http://apl2020.epizy.com/
+gif: apl.webm
 ---
 
 <h6 class="mt-3">A web platform for a sports league.</h6>
