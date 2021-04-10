@@ -12,10 +12,10 @@ const me = () => {
       <SEO title="Thank you" />
       <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
         <div className="p-3">
-          <h1>Thank you for contacting me.</h1>
-          <h5 className="mt-3">I will get back to you as soon as I can.</h5>
-          <h5 className="mt-3">Meanwhile if you want to reach me directly, you can email me at <a href="mailto:arpit@arpitdalal.dev"><u>arpit@arpitdalal.dev</u></a></h5>
-          <h2 className="d-flex justify-content-center">
+          <h1 className="anim">Thank you for contacting me.</h1>
+          <h5 className="mt-3 anim">I will get back to you as soon as I can.</h5>
+          <h5 className="mt-3 anim">Meanwhile if you want to reach me directly, you can email me at <a href="mailto:arpit@arpitdalal.dev"><u>arpit@arpitdalal.dev</u></a></h5>
+          <h2 className="d-flex justify-content-center anim">
             <span className="mr-1">Cheers!</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
               <path d="m25.063 27.666-9.435-1.847-.266 1.522-3.8-.665a4.63 4.63 0 0 0 -5.362 3.766l-2.534 14.458a4.635 4.635 0 0 0 3.767 5.36l3.8.666-.4 2.282a1.545 1.545 0 1 0 -.533 3.043l21.3 3.726a1.545 1.545 0 0 0 .532-3.044l.868-4.911s-7.813-22.769-7.864-23.074zm-13.294 20.216-3.043-.532a2.316 2.316 0 0 1 -1.883-2.681l2.262-12.934a2.316 2.316 0 0 1 2.681-1.883l3.043.532z" fill="#cfcfcf"/>
@@ -44,8 +44,8 @@ const me = () => {
             </svg>
           </h2>
           <div className="d-flex flex-column flex-md-row">
-            <Link to="/projects" className="cta cta-primary">Dive into my work</Link>
-            <Link to="/me" className="cta cta-secondary">Know more about me</Link>
+            <Link to="/projects" className="cta cta-primary anim">Dive into my work</Link>
+            <Link to="/me" className="cta cta-secondary anim">Know more about me</Link>
           </div>
         </div>
       </div>
