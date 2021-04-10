@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const video = ({ url }) => {
   return (
     <video
-      className="embed-responsive embed-responsive-16by9 rounded"
+      className="embed-responsive embed-responsive-16by9 rounded anim"
       autoPlay
       muted
       playsInline

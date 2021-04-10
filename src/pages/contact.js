@@ -16,7 +16,7 @@ const Contact = () => {
         <div id="contactDiv" className="main-div">
           <h1 className="anim">Get in touch</h1>
           <p className="px-5 anim">You have a business that needs web presence or starting one online and want to build a great web experience for your customers?</p>
-          <p>Let's work together! Or just say Hi!</p>
+          <p className="anim">Let's work together! Or just say Hi!</p>
           
           <Form />
           

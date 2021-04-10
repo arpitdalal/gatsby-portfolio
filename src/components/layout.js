@@ -16,21 +16,23 @@ const Layout = ({ children }) => {
   }, [theme])
 
   useEffect(() => {
-		let tl = gsap.timeline({ duration: 0.05 });
-    const mediaQuery = window.matchMedia("(max-width: 991px)");
-    if(mediaQuery.matches) {
-      tl
-        .from('.left-div', { y: -10, opacity: 0 })
-        .from('.right-div', { y: -10, opacity: 0 })
-        .from('.toggle-label', { scale: 0, opacity: 0 })
-        .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
-     
-    } else {
-      tl
-        .from('.left-div', { x: -10, opacity: 0 })
-        .from('.right-div', { x: +10, opacity: 0 })
-        .from('.toggle-label', { scale: 0, opacity: 0 })
-        .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
+    if(typeof window !== 'undefined'){
+      let tl = gsap.timeline({ duration: 0.05 });
+      const mediaQuery = window.matchMedia("(max-width: 991px)");
+      if(mediaQuery.matches) {
+        tl
+          .from('.left-div', { y: -10, opacity: 0 })
+          .from('.right-div', { y: -10, opacity: 0 })
+          .from('.toggle-label', { scale: 0, opacity: 0 })
+          .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
+       
+      } else {
+        tl
+          .from('.left-div', { x: -10, opacity: 0 })
+          .from('.right-div', { x: +10, opacity: 0 })
+          .from('.toggle-label', { scale: 0, opacity: 0 })
+          .from('.anim', { y: -20, opacity: 0, stagger: 0.02 });
+      }
     }
   })
 
