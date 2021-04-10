@@ -1,5 +1,5 @@
 ---
-title: Atmiya Premiere League
+title: Atmiya Premiere League 2021
 subtitle: Web platform for a sport league recreated.
 url: http://apl.epizy.com
 gif: apl.webm
