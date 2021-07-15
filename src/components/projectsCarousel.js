@@ -47,7 +47,7 @@ const ProjectsCarousel = () => {
               className="project-links"
               to={`/projects/${edge.node.fields.slug}`}
             >
-              <ProjectThumbnail url={`/${edge.node.frontmatter.thumbnail}`} />
+              <ProjectThumbnail url={edge.node.frontmatter.thumbnail} />
               <h4 className="mt-2">{edge.node.frontmatter.title}</h4>
             </Link>
           </SwiperSlide>
@@ -56,13 +56,7 @@ const ProjectsCarousel = () => {
       <SwiperSlide>
         <div className="swiper-scrollbar"></div>
         <Link className="project-links" to="/projects/">
-          <StaticImage
-            src="../images/billboard.jpg"
-            alt="billboard image"
-            height={446}
-            width={881}
-            placeholder="blurred"
-          />
+          <ProjectThumbnail url="/billboard.jpg" />
           <h4 className="mt-2">All Projects</h4>
         </Link>
       </SwiperSlide>

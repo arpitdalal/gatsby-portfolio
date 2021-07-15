@@ -4,20 +4,12 @@ import { Link } from "gatsby"
 import CustomLayout from "../components/layout"
 import Seo from "../components/seo"
 import ProjectsCarousel from "../components/projectsCarousel"
-// import ProgressBar from "../components/progressBar"
 import SkillShowcase from "../components/skillShowcase"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
 const IndexPage = () => {
-  // const progressBarData = [
-  //   { title: "PHP", completed: 95 },
-  //   { title: "WordPress", completed: 85 },
-  //   { title: "JavaScript", completed: 90 },
-  //   { title: "ReactJS", completed: 75 },
-  //   { title: "NodeJS", completed: 80 },
-  // ]
 
   return (
     <CustomLayout>
@@ -62,13 +54,6 @@ const IndexPage = () => {
           <div className="col-lg-6">
             <h2 className="text-center mb-3">My Skills</h2>
             <SkillShowcase />
-            {/* {progressBarData.map((item, index) => (
-              <ProgressBar
-                key={index}
-                title={item.title}
-                completed={item.completed}
-              />
-            ))} */}
           </div>
           <div className="col-lg-6 mt-4 mt-lg-0">
             <h2 className="text-center mb-3">My Work</h2>
