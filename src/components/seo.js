@@ -1,16 +1,27 @@
 /**
- * SEO component that queries for data with
+ * Seo component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function Seo({ description, lang, meta, title }) {
+  const [metaVariables, setMetaVariables] = useState({
+    metaDescription: "",
+    defaultTitle: "",
+    keywords: "",
+    ogURL: "",
+    ogImg: "",
+    ogWidth: "",
+    ogHeight: "",
+    twitterImg: "",
+  })
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,14 +42,18 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-  const keywords = site.siteMetadata?.keywords
-  const ogURL = site.siteMetadata?.ogURL
-  const ogImg = site.siteMetadata?.ogImg
-  const ogWidth = site.siteMetadata?.ogWidth
-  const ogHeight = site.siteMetadata?.ogHeight
-  const twitterImg = site.siteMetadata?.twitterImg
+  useEffect(() => {
+    setMetaVariables({
+      metaDescription: description || site.siteMetadata.description,
+      defaultTitle: site.siteMetadata?.title,
+      keywords: site.siteMetadata?.keywords,
+      ogURL: site.siteMetadata?.ogURL,
+      ogImg: site.siteMetadata?.ogImg,
+      ogWidth: site.siteMetadata?.ogWidth,
+      ogHeight: site.siteMetadata?.ogHeight,
+      twitterImg: site.siteMetadata?.twitterImg,
+    })
+  })
 
   return (
     <Helmet
@@ -46,11 +61,13 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={
+        metaVariables.defaultTitle ? `%s | ${metaVariables.defaultTitle}` : null
+      }
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaVariables.metaDescription,
         },
         {
           property: `robots`,
@@ -58,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `keywords`,
-          content: keywords,
+          content: metaVariables.keywords,
         },
         {
           property: `og:locale`,
@@ -70,27 +87,27 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaVariables.title,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaVariables.metaDescription,
         },
         {
           property: `og:url`,
-          content: ogURL,
+          content: metaVariables.ogURL,
         },
         {
           property: `og:image`,
-          content: ogImg,
+          content: metaVariables.ogImg,
         },
         {
           property: `og:width`,
-          content: ogWidth,
+          content: metaVariables.ogWidth,
         },
         {
           property: `og:height`,
-          content: ogHeight,
+          content: metaVariables.ogHeight,
         },
         {
           name: `twitter:card`,
@@ -106,28 +123,28 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: metaVariables.metaDescription,
         },
         {
           name: `twitter:image`,
-          content: twitterImg,
+          content: metaVariables.twitterImg,
         },
       ].concat(meta)}
     />
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default Seo
