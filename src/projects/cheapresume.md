@@ -1,8 +1,9 @@
 ---
-title: "CheapResume"
-subtitle: "A resume/cover-letter building service provider."
-url: "https://cheapresume.net/"
-gif: "cheapresume.webm"
+title: CheapResume
+subtitle: A resume/cover-letter building service provider.
+url: https://cheapresume.net/
+gif: cheapresume.webm
+thumbnail: /cheapresume.png
 ---
 
 <h6 class="mt-3">A resume/cover-letter building service provider.</h6>
