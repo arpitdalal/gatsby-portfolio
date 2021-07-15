@@ -2,7 +2,6 @@
 title: CheapResume
 subtitle: A resume/cover-letter building service provider.
 url: https://cheapresume.net/
-gif: cheapresume.webm
 thumbnail: /cheapresume.png
 ---
 
