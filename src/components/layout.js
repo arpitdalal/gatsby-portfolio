@@ -4,9 +4,9 @@ import favicon from '../images/favicon.ico'
 import Helmet from "react-helmet"
 import gsap from 'gsap'
 
-import Header from "./header"
+import Header from "./Header"
 
-const Layout = ({ children }) => {
+const CustomLayout = ({ children }) => {
   const [theme, setTheme] = useState('light-mode')
 
   useEffect(() => {
@@ -59,8 +59,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+CustomLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default CustomLayout

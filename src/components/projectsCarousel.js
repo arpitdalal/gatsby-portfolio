@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { StaticImage } from "gatsby-plugin-image"
 import "swiper/swiper-bundle.css"
 
-import ProjectThumbnail from "./projectThumbnail"
-import "./projectCarousel.css"
+import ProjectThumbnail from "./ProjectThumbnail"
+import "./ProjectCarousel.css"
 
 SwiperCore.use([Navigation, Pagination, A11y])
 

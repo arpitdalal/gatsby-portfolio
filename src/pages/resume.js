@@ -1,19 +1,23 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../components/layout'
-import SEO from "../components/seo"
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
 
-const projects = () => {
+const Resume = () => {
   return (
-    <Layout>
-      <SEO title="My Resume" />
+    <CustomLayout>
+      <Seo title="My Resume" />
       <div class="card-body p-0">
         <div id="resumeDiv" class="main-div h-100 w-100 p-0">
-          <iframe title="resume" className="w-100 h-100" src="/resume.pdf"></iframe>
+          <iframe
+            title="resume"
+            className="w-100 h-100"
+            src="/resume.pdf"
+          ></iframe>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 
-export default projects
+export default Resume

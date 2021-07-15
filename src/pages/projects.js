@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ProjectThumbnail from "../components/projectThumbnail"
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
+import ProjectThumbnail from "../components/ProjectThumbnail"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./projects.css"
 
@@ -29,8 +29,8 @@ const Projects = () => {
   `)
 
   return (
-    <Layout>
-      <SEO title="My Work" />
+    <CustomLayout>
+      <Seo title="My Work" />
       <div className="card-body">
         <div id="projectsDiv" className="main-div">
           <h1 className="anim">My work</h1>
@@ -96,7 +96,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 

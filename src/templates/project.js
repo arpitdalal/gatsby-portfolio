@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import ProjectThumbnail from "../components/projectThumbnail"
-import SEO from "../components/seo"
+import CustomLayout from "../components/Layout"
+import ProjectThumbnail from "../components/ProjectThumbnail"
+import Seo from "../components/Seo"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
@@ -23,8 +23,8 @@ export const query = graphql`
 
 const Project = ({ data }) => {
   return (
-    <Layout>
-      <SEO title={data.markdownRemark.frontmatter.title} />
+    <CustomLayout>
+      <Seo title={data.markdownRemark.frontmatter.title} />
       <div className="card-body">
         <div className="main-div project">
           <h1 className="anim">{data.markdownRemark.frontmatter.title}</h1>
@@ -50,7 +50,7 @@ const Project = ({ data }) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import "./toggle.css"
+import "./Toggle.css"
 
-const Toggle = ({ setTheme }) => {
+const ToggleDesktop = ({ setTheme }) => {
   const [title, setTitle] = useState("Change to dark theme")
   const [isChecked, setIsChecked] = useState(true)
   let theme = useRef()
@@ -64,4 +64,4 @@ const Toggle = ({ setTheme }) => {
   )
 }
 
-export default Toggle
+export default ToggleDesktop

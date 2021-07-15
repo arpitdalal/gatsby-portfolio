@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { StaticImage } from 'gatsby-plugin-image'
 
-const me = () => {
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
+
+const Me = () => {
   return (
-    <Layout>
-      <SEO title="About Me" />
+    <CustomLayout>
+      <Seo title="About Me" />
       <StaticImage className="card-img-top d-lg-none img-mob" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" placeholder="blurred" />
       <div className="card-body">
         <div id="meDiv" className="main-div">
@@ -61,8 +61,8 @@ const me = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 
-export default me
+export default Me

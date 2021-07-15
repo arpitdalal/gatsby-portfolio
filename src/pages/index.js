@@ -1,25 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ProjectsCarousel from "../components/projectsCarousel"
-import ProgressBar from "../components/progressBar"
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
+import ProjectsCarousel from "../components/ProjectsCarousel"
+// import ProgressBar from "../components/ProgressBar"
+import SkillShowcase from "../components/SkillShowcase"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
 const IndexPage = () => {
-  const progressBarData = [
-    { title: "PHP", completed: 95 },
-    { title: "WordPress", completed: 85 },
-    { title: "JavaScript", completed: 90 },
-    { title: "ReactJS", completed: 75 },
-    { title: "NodeJS", completed: 80 },
-  ]
+  // const progressBarData = [
+  //   { title: "PHP", completed: 95 },
+  //   { title: "WordPress", completed: 85 },
+  //   { title: "JavaScript", completed: 90 },
+  //   { title: "ReactJS", completed: 75 },
+  //   { title: "NodeJS", completed: 80 },
+  // ]
 
   return (
-    <Layout>
-      <SEO title="Home" />
+    <CustomLayout>
+      <Seo title="Home" />
       <div className="card-body text-left">
         <div className="row mx-0 anim">
           <div className="col-lg-6">
@@ -59,13 +60,14 @@ const IndexPage = () => {
         <div className="row mt-5 mx-0 anim">
           <div className="col-lg-6">
             <h2 className="text-center mb-3">My Skills</h2>
-            {progressBarData.map((item, index) => (
+            <SkillShowcase />
+            {/* {progressBarData.map((item, index) => (
               <ProgressBar
                 key={index}
                 title={item.title}
                 completed={item.completed}
               />
-            ))}
+            ))} */}
           </div>
           <div className="col-lg-6 mt-4 mt-lg-0">
             <h2 className="text-center mb-3">My Work</h2>
@@ -73,7 +75,7 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 

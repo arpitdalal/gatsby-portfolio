@@ -1,15 +1,15 @@
 import React from 'react'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Form from '../components/form'
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
+import Form from '../components/Form'
 
 import './contact.css'
 
 const Contact = () => {
   return (
-    <Layout>
-      <SEO title="Contact Me" />
+    <CustomLayout>
+      <Seo title="Contact Me" />
       <div className="card-body">
         <div id="contactDiv" className="main-div">
           <h1 className="anim">Get in touch</h1>
@@ -84,7 +84,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   )
 }
 

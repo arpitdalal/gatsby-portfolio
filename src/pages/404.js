@@ -1,13 +1,13 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { Link } from "gatsby"
 
+import CustomLayout from "../components/Layout"
+import Seo from "../components/Seo"
+
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="Page Not found" />
+  <CustomLayout>
+    <Seo title="Page Not found" />
     <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
       <StaticImage
         src="../images/404.png"
@@ -32,7 +32,7 @@ const NotFoundPage = () => (
         </div>
       </div>
     </div>
-  </Layout>
+  </CustomLayout>
 )
 
 export default NotFoundPage
