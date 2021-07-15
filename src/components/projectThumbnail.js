@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./ProjectThumbnail.css"
+import "./projectThumbnail.css"
 
 const ProjectThumbnail = ({ url }) => {
   return (

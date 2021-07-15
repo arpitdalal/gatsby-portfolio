@@ -4,7 +4,7 @@ import favicon from '../images/favicon.ico'
 import Helmet from "react-helmet"
 import gsap from 'gsap'
 
-import Header from "./Header"
+import Header from "./header"
 
 const CustomLayout = ({ children }) => {
   const [theme, setTheme] = useState('light-mode')

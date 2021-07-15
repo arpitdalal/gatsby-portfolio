@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import CustomLayout from "../components/Layout"
-import Seo from "../components/Seo"
+import CustomLayout from "../components/layout"
+import Seo from "../components/seo"
 
 const ThankYou = () => {
   return (

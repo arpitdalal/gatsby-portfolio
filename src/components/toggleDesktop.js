@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import "./Toggle.css"
+import "./toggle.css"
 
 const ToggleDesktop = ({ setTheme }) => {
   const [title, setTitle] = useState("Change to dark theme")

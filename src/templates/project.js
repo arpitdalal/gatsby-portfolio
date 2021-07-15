@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import CustomLayout from "../components/Layout"
-import ProjectThumbnail from "../components/ProjectThumbnail"
-import Seo from "../components/Seo"
+import CustomLayout from "../components/layout"
+import ProjectThumbnail from "../components/projectThumbnail"
+import Seo from "../components/seo"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 

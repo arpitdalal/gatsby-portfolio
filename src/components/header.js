@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Navbar, Nav } from "react-bootstrap"
 
-import ToggleMobile from "./ToggleMobile"
-import ToggleDesktop from "./ToggleDesktop"
+import ToggleMobile from "./toggleMobile"
+import ToggleDesktop from "./toggleDesktop"
 
-import "./Header.css"
+import "./header.css"
 
 const Header = ({ setTheme }) => {
   const [toggleClass, setToggleClass] = useState(false)

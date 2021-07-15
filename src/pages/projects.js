@@ -1,9 +1,10 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import CustomLayout from "../components/Layout"
-import Seo from "../components/Seo"
-import ProjectThumbnail from "../components/ProjectThumbnail"
+import CustomLayout from "../components/layout"
+import Seo from "../components/seo"
+import ProjectThumbnail from "../components/projectThumbnail"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./projects.css"
 

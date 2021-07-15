@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./ProgressBar.css"
+import "./progressBar.css"
 
 const injectStyle = style => {
   const styleElement = document.createElement("style")

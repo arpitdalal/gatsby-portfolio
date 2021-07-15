@@ -5,23 +5,12 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useEffect, useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
-  const [metaVariables, setMetaVariables] = useState({
-    metaDescription: "",
-    defaultTitle: "",
-    keywords: "",
-    ogURL: "",
-    ogImg: "",
-    ogWidth: "",
-    ogHeight: "",
-    twitterImg: "",
-  })
-
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,18 +31,14 @@ function Seo({ description, lang, meta, title }) {
     `
   )
 
-  useEffect(() => {
-    setMetaVariables({
-      metaDescription: description || site.siteMetadata.description,
-      defaultTitle: site.siteMetadata?.title,
-      keywords: site.siteMetadata?.keywords,
-      ogURL: site.siteMetadata?.ogURL,
-      ogImg: site.siteMetadata?.ogImg,
-      ogWidth: site.siteMetadata?.ogWidth,
-      ogHeight: site.siteMetadata?.ogHeight,
-      twitterImg: site.siteMetadata?.twitterImg,
-    })
-  })
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+  const keywords = site.siteMetadata?.keywords
+  const ogURL = site.siteMetadata?.ogURL
+  const ogImg = site.siteMetadata?.ogImg
+  const ogWidth = site.siteMetadata?.ogWidth
+  const ogHeight = site.siteMetadata?.ogHeight
+  const twitterImg = site.siteMetadata?.twitterImg
 
   return (
     <Helmet
@@ -61,13 +46,11 @@ function Seo({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={
-        metaVariables.defaultTitle ? `%s | ${metaVariables.defaultTitle}` : null
-      }
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
-          content: metaVariables.metaDescription,
+          content: metaDescription,
         },
         {
           property: `robots`,
@@ -75,7 +58,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `keywords`,
-          content: metaVariables.keywords,
+          content: keywords,
         },
         {
           property: `og:locale`,
@@ -87,27 +70,27 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: metaVariables.title,
+          content: title,
         },
         {
           property: `og:description`,
-          content: metaVariables.metaDescription,
+          content: metaDescription,
         },
         {
           property: `og:url`,
-          content: metaVariables.ogURL,
+          content: ogURL,
         },
         {
           property: `og:image`,
-          content: metaVariables.ogImg,
+          content: ogImg,
         },
         {
           property: `og:width`,
-          content: metaVariables.ogWidth,
+          content: ogWidth,
         },
         {
           property: `og:height`,
-          content: metaVariables.ogHeight,
+          content: ogHeight,
         },
         {
           name: `twitter:card`,
@@ -123,11 +106,11 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaVariables.metaDescription,
+          content: metaDescription,
         },
         {
           name: `twitter:image`,
-          content: metaVariables.twitterImg,
+          content: twitterImg,
         },
       ].concat(meta)}
     />

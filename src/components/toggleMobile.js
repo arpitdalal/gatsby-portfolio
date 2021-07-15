@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import "./Toggle.css"
+import "./toggle.css"
 
 const ToggleMobile = ({ setTheme }) => {
   const lightMode = "light-mode"

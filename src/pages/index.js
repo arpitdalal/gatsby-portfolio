@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import CustomLayout from "../components/Layout"
-import Seo from "../components/Seo"
-import ProjectsCarousel from "../components/ProjectsCarousel"
-// import ProgressBar from "../components/ProgressBar"
-import SkillShowcase from "../components/SkillShowcase"
+import CustomLayout from "../components/layout"
+import Seo from "../components/seo"
+import ProjectsCarousel from "../components/projectsCarousel"
+// import ProgressBar from "../components/progressBar"
+import SkillShowcase from "../components/skillShowcase"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
