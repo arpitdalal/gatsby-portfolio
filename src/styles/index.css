@@ -10,6 +10,7 @@ body {
   --ad-highlight-text: #2a2a2a;
   --ad-icon: #7348f4;
   --ad-icon-background: #eff0f3;
+  --ad-browser-color: #e8e8e8;
   --ad-card-shadow: 0 4px 8px 0 rgb(179, 179, 179), 0 6px 20px 0 rgb(179, 179, 179);
 }
 
@@ -23,13 +24,14 @@ body.dark-mode {
   --ad-highlight-text: #c3d2e6;
   --ad-icon: #bd5fff;
   --ad-icon-background: #fffffe;
+  --ad-browser-color: #36383a;
   --ad-card-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
 }
 
 .main {
   background: var(--ad-background);
   color: var(--ad-text) !important;
-  transition: background .5s, box-shadow.5s;
+  transition: background 0.5s, box-shadow0.5s;
 }
 
 .my-container {
@@ -40,7 +42,7 @@ body.dark-mode {
 
 @supports (-moz-appearance:none) {
   .main {
-      transition: .5s;
+    transition: 0.5s;
   }
 }
 
@@ -98,6 +100,7 @@ h6 {
 a {
   color: var(--ad-text) !important;
   text-decoration: none;
+  transition: all 0.5s;
 }
 
 a:active {
@@ -120,7 +123,7 @@ p {
 }
 
 p+p {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .main-div {
@@ -132,21 +135,20 @@ p+p {
 }
 
 .button {
-  padding: .2rem 1rem;
+  padding: 0.2rem 1rem;
   border-radius: 25px;
   background: var(--ad-background);
   color: var(--ad-text) !important;
   box-shadow: 4px 4px 8px var(--ad-box-shadow-dark),
-              -4px -4px 8px var(--ad-box-shadow-light);
+    -4px -4px 8px var(--ad-box-shadow-light);
   margin: 10px;
-  transition: background .5s, box-shadow .5s, color .5s;
+  transition: background 0.5s, box-shadow 0.5s, color 0.5s;
   border: none;
 }
 
 .button:hover {
-  transition: box-shadow .5s;
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
-      -3px -3px 6px var(--ad-box-shadow-light);
+    -3px -3px 6px var(--ad-box-shadow-light);
 }
 
 .submit-button {
@@ -159,21 +161,21 @@ p+p {
 }
 
 .fill-color {
-  transition: fill .5s;
+  transition: fill 0.5s;
   fill: var(--ad-highlight);
 }
 
 .card {
   border: none;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
   margin: 5vh 0;
   height: 90vh;
   width: 100%;
   background: var(--ad-background);
   border-radius: 25px;
   box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
-      -6px -6px 12px var(--ad-box-shadow-light);
+    -6px -6px 12px var(--ad-box-shadow-light);
   align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
@@ -182,15 +184,15 @@ p+p {
 .left-div {
   height: 100vh;
   width: 100vw;
-  padding-left: .7rem;
-  padding-right: .7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .right-div {
   height: 100vh;
   width: 100vw;
-  padding-left: .7rem;
-  padding-right: .7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .social-links {
@@ -217,39 +219,38 @@ p+p {
 
 .social-link:hover .svg-bg {
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
-      -3px -3px 6px var(--ad-box-shadow-light);
+    -3px -3px 6px var(--ad-box-shadow-light);
 }
 
 .social-link:active .svg-bg {
   box-shadow: inset 2px 2px 4px var(--ad-box-shadow-dark),
-      inset -2px -2px 4px var(--ad-box-shadow-light);
+    inset -2px -2px 4px var(--ad-box-shadow-light);
 }
 
 .svg-bg {
-  transition: .5s;
+  transition: 0.5s;
   background: var(--ad-background);
   box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
-      -4px -4px 12px var(--ad-box-shadow-light);
-  padding: .5rem;
+    -4px -4px 12px var(--ad-box-shadow-light);
+  padding: 0.5rem;
   border-radius: 50%;
 }
 
 /* start BMC styles */
 .bmc-btn-container {
-  transition: box-shadow .5s;
+  transition: box-shadow 0.5s;
   margin: 10px;
   border-radius: 25px;
   box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
-      -6px -6px 12px var(--ad-box-shadow-light);
+    -6px -6px 12px var(--ad-box-shadow-light);
 }
 
 .bmc-btn-container:hover {
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
-      -3px -3px 6px var(--ad-box-shadow-light);
+    -3px -3px 6px var(--ad-box-shadow-light);
 }
 
 .bmc-btn-container a {
-  transition: all .5s;
   border-radius: 12px;
   font-size: 26px;
   border: none;
@@ -258,18 +259,18 @@ p+p {
   display: inline-flex !important;
   align-items: center;
   font-family: Cookie !important;
-  transition: background .5s, box-shadow .5s;
+  transition: background 0.5s, box-shadow 0.5s;
   width: 100%;
   background: var(--ad-background);
   background-color: unset !important;
   justify-content: center;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   height: unset;
   color: var(--ad-text);
 }
 
 .bmc-btn-container a span {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .bmc-btn-container a:hover {
@@ -286,7 +287,7 @@ p+p {
 }
 
 .bmc-btn-container svg path {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .bmc-btn-container svg path:last-child {
@@ -296,6 +297,7 @@ p+p {
 .bmc-btn-container svg path:nth-child(12) {
   fill: var(--ad-highlight);
 }
+
 /* end BMC styles */
 
 /* start CTA buttons */
@@ -307,11 +309,11 @@ p+p {
   color: var(--ad-text) !important;
   flex-grow: 1;
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
-      -3px -3px 6px var(--ad-box-shadow-light);
-  transition: background .5s, box-shadow .5s;
+    -3px -3px 6px var(--ad-box-shadow-light);
+  transition: background 0.5s, box-shadow 0.5s, color 0.5s;
 }
 
-.cta + .cta {
+.cta+.cta {
   margin-left: 1rem;
 }
 
@@ -321,12 +323,13 @@ p+p {
 }
 
 .cta a {
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .cta.cta-primary a {
   color: var(--ad-background) !important;
 }
+
 /* end CTA buttons */
 
 /* grid styles */
@@ -338,6 +341,7 @@ p+p {
   grid-template-areas:
     ". .";
 }
+
 /* end of grid styles */
 
 /* styles for dialogflow messenger start */
@@ -345,6 +349,7 @@ df-messenger {
   --df-messenger-button-titlebar-color: #7f5af0;
   --df-messenger-button-titlebar-font-color: #fffffe;
 }
+
 /* styles for dialogflow messenger end */
 
 /* responsive styles */
@@ -354,7 +359,7 @@ df-messenger {
     padding-right: 2rem;
   }
 
-  .right-div .card{
+  .right-div .card {
     margin-top: 8rem;
     height: 75vh;
   }
@@ -369,7 +374,7 @@ df-messenger {
     margin-top: 2rem;
   }
 
-  .cta + .cta {
+  .cta+.cta {
     margin-left: 0;
     margin-top: 1rem;
   }

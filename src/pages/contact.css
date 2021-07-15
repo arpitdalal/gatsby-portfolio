@@ -2,6 +2,7 @@
 .jotform-form {
   padding: 2rem 10rem;
 }
+
 .jotform-form .form-section {
   padding: 0;
   text-align: left;
@@ -18,15 +19,16 @@
 .jotform-form .form-section input,
 .jotform-form .form-section textarea {
   color: var(--ad-text);
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   width: 100%;
   border-radius: 25px;
   background: var(--ad-background);
   box-shadow: 4px 4px 8px var(--ad-box-shadow-dark),
-      -4px -4px 8px var(--ad-box-shadow-light);
+    -4px -4px 8px var(--ad-box-shadow-light);
   border: none;
-  transition: background .5s, box-shadow .5s;
-  -webkit-appearance: none; /* safari fix */
+  transition: background 0.5s, box-shadow 0.5s;
+  -webkit-appearance: none;
+  /* safari fix */
 }
 
 .jotform-form .form-section input:active,
@@ -40,7 +42,7 @@
 .jotform-form .form-section input:focus,
 .jotform-form .form-section textarea:focus {
   box-shadow: inset 3px 3px 6px var(--ad-box-shadow-dark),
-      inset -3px -3px 6px var(--ad-box-shadow-light);
+    inset -3px -3px 6px var(--ad-box-shadow-light);
 }
 
 .jotform-form .form-sub-label {
@@ -48,7 +50,7 @@
 }
 
 #input_2 {
-  transition: all .5s;
+  transition: all 0.5s;
   background: var(--ad-highlight);
   color: #e6e6e6;
 }
@@ -64,7 +66,7 @@
   background-color: #FF4E5D;
   color: #fff;
   padding: 5px;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   border-radius: 25px;
   box-sizing: border-box;
 }
@@ -82,6 +84,7 @@ li.form-line-error .form-error-message img {
 .form-error-arrow-inner {
   display: none;
 }
+
 /* jot form ends */
 
 #contactDiv .social-links {
@@ -96,6 +99,6 @@ li.form-line-error .form-error-message img {
 /* responsive styles */
 @media (max-width:991px) {
   .jotform-form {
-    padding: 2rem .8rem;
+    padding: 2rem 0.8rem;
   }
 }

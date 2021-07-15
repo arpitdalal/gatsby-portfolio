@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination, A11y } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { StaticImage } from "gatsby-plugin-image"
+import "swiper/swiper-bundle.css"
 
-import Video from '../components/video'
-import 'swiper/swiper-bundle.css'
-import './projectCarousel.css'
-import { StaticImage } from 'gatsby-plugin-image';
+import ProjectThumbnail from "./projectThumbnail"
+import "./projectCarousel.css"
 
-SwiperCore.use([Navigation, Pagination, A11y]);
+SwiperCore.use([Navigation, Pagination, A11y])
 
 const ProjectsCarousel = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +18,7 @@ const ProjectsCarousel = () => {
           node {
             frontmatter {
               title
-              gif
+              thumbnail
             }
             fields {
               slug
@@ -30,42 +30,43 @@ const ProjectsCarousel = () => {
   `)
 
   return (
-    <>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={1}
-        allowTouchMove={false}
-        navigation
-        pagination={{
-          type: 'progressbar'
-        }}
-      >
-        {data.allMarkdownRemark.edges.map((edge, index) => {
-          return(
-            <SwiperSlide key={index}>
-              <div className="swiper-scrollbar"></div>
-              <Link className="project-links" to={`/projects/${edge.node.fields.slug}`}>
-                <Video className="rounded" url={`/${edge.node.frontmatter.gif}`}></Video>
-                <h4 className="mt-2">{edge.node.frontmatter.title}</h4>
-              </Link>
-            </SwiperSlide>
-          )
-        })}
-        <SwiperSlide>
-          <div className="swiper-scrollbar"></div>
-          <Link className="project-links" to="/projects/">
-            <StaticImage 
-              src="../images/billboard.jpg"
-              alt="billboard image"
-              height={446}
-              width={881}
-              placeholder="blurred"
-            />
-            <h4 className="mt-2">All Projects</h4>
-          </Link>
-        </SwiperSlide>
-      </Swiper>
-    </>
+    <Swiper
+      spaceBetween={20}
+      slidesPerView={1}
+      allowTouchMove={true}
+      navigation
+      pagination={{
+        type: "progressbar",
+      }}
+    >
+      {data.allMarkdownRemark.edges.map((edge, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <div className="swiper-scrollbar"></div>
+            <Link
+              className="project-links"
+              to={`/projects/${edge.node.fields.slug}`}
+            >
+              <ProjectThumbnail url={`/${edge.node.frontmatter.thumbnail}`} />
+              <h4 className="mt-2">{edge.node.frontmatter.title}</h4>
+            </Link>
+          </SwiperSlide>
+        )
+      })}
+      <SwiperSlide>
+        <div className="swiper-scrollbar"></div>
+        <Link className="project-links" to="/projects/">
+          <StaticImage
+            src="../images/billboard.jpg"
+            alt="billboard image"
+            height={446}
+            width={881}
+            placeholder="blurred"
+          />
+          <h4 className="mt-2">All Projects</h4>
+        </Link>
+      </SwiperSlide>
+    </Swiper>
   )
 }
 

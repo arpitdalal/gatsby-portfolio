@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../styles/index.css'
 
 const me = () => {
   return (

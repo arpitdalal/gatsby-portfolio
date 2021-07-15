@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-      <df-messenger intent="WELCOME" chat-title="Arpit's info bot" chat-icon="/bot.png" agent-id="ac73d5ad-b388-4a66-97af-33832605e098" language-code="en"></df-messenger>
+      <df-messenger intent="WELCOME" chat-title="Arpit's info bot" chat-icon="/images/bot.png" agent-id="ac73d5ad-b388-4a66-97af-33832605e098" language-code="en"></df-messenger>
     </>
   )
 }

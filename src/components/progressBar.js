@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
-import './progressBar.css'
+import "./progressBar.css"
 
-const injectStyle = (style) => {
-  const styleElement = document.createElement('style')
+const injectStyle = style => {
+  const styleElement = document.createElement("style")
   let styleSheet = null
 
   document.head.appendChild(styleElement)
@@ -15,7 +15,7 @@ const injectStyle = (style) => {
 
 const ProgressBar = ({ title, completed }) => {
   const fillerStyles = {
-    width: `${completed}%`
+    width: `${completed}%`,
   }
 
   const keyframesStyle = `
@@ -27,15 +27,18 @@ const ProgressBar = ({ title, completed }) => {
         width: ${completed};
       }
     }
-  `;
+  `
 
-  typeof window !== 'undefined' && injectStyle(keyframesStyle)
+  typeof window !== "undefined" && injectStyle(keyframesStyle)
 
   return (
     <div className="bar-div">
       <span>{title}</span>
       <div className="bar-container">
-        <div className="bar-filler text-right d-flex align-items-center justify-content-end" style={fillerStyles}>
+        <div
+          className="bar-filler text-right d-flex align-items-center justify-content-end"
+          style={fillerStyles}
+        >
           <span className="bar-label">{`${completed}%`}</span>
         </div>
       </div>

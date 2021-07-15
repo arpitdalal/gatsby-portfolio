@@ -2,7 +2,7 @@
 title: Atmiya Premiere League
 subtitle: A web platform for a sports league.
 url: http://apl.epizy.com/
-gif: apl.webm
+thumbnail: /apl.jpg
 ---
 
 <h6 class="mt-3">A web platform for a sports league.</h6>

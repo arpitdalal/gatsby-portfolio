@@ -8,7 +8,7 @@
 }
 
 .head {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .head:hover {
@@ -28,34 +28,34 @@
 
 .card-sub-title {
   font-size: 1.25rem;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   color: var(--ad-highlight) !important;
 }
 
 .card-text .link {
-  transition: .5s;
+  transition: 0.5s;
   color: var(--ad-highlight) !important;
 }
 
 .nav-pills .nav-link {
-  transition: background .5s, box-shadow .5s;
+  transition: background 0.5s, box-shadow 0.5s, color 0.5s;
   cursor: pointer;
   margin: 10px;
   border-radius: 25px !important;
   box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
-      -6px -6px 12px var(--ad-box-shadow-light);
+    -6px -6px 12px var(--ad-box-shadow-light);
 }
 
 .nav-pills .nav-link:hover {
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
-      -3px -3px 6px var(--ad-box-shadow-light);
+    -3px -3px 6px var(--ad-box-shadow-light);
 }
 
 .nav-pills .nav-link.active {
   color: var(--ad-highlight) !important;
   background: var(--ad-background) !important;
   box-shadow: inset 2px 2px 4px var(--ad-box-shadow-dark),
-      inset -2px -2px 4px var(--ad-box-shadow-light);
+    inset -2px -2px 4px var(--ad-box-shadow-light);
 }
 
 /* start mobile navigation */
@@ -64,13 +64,13 @@
 }
 
 .mobile .navbar {
-  transition: .5s;
+  transition: 0.5s;
   background: var(--ad-background);
   box-shadow: 6px 6px 12px var(--ad-box-shadow-light);
 }
 
 .mobile .navbar-brand {
-  transition: .5s;
+  transition: 0.5s;
   color: var(--ad-text) !important;
 }
 
@@ -100,10 +100,10 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -119,10 +119,10 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .mobile .animated-icon span {
@@ -179,7 +179,7 @@
 .mobile .navbar-expand-lg .navbar-nav .nav-link-mb {
   cursor: pointer;
   padding: 10px 20px;
-  transition: background .5s, box-shadow .5s;
+  transition: background 0.5s, box-shadow 0.5s;
   margin: 10px;
   border-radius: 25px;
   box-shadow: 6px 6px 12px var(--ad-box-shadow-dark),
@@ -195,7 +195,7 @@
 }
 
 .mobile .nav-link-mb:hover {
-  transition: box-shadow .5s;
+  transition: box-shadow 0.5s;
   box-shadow: 3px 3px 6px var(--ad-box-shadow-dark),
     -3px -3px 6px var(--ad-box-shadow-light) !important;
 }
@@ -206,4 +206,5 @@
     inset -2px -2px 4px var(--ad-box-shadow-light) !important;
   color: var(--ad-highlight) !important;
 }
+
 /* end mobile navigation */

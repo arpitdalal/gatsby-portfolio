@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Form from '../components/form'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../styles/index.css'
 import './contact.css'
 
 const Contact = () => {

@@ -7,12 +7,12 @@ a:hover h3 {
 }
 
 .project {
-  padding: .5rem .5rem inherit;
+  padding: 0.5rem 0.5rem inherit;
 }
 
 .light-mode .card .projects video,
 .light-mode .card .project video {
-  box-shadow: 4px 4px 8px rgba(115, 72, 244, .6);
+  box-shadow: 4px 4px 8px rgba(115, 72, 244, 0.6);
 }
 
 .card .projects video,
