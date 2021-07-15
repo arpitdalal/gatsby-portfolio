@@ -48,6 +48,9 @@
 .jotform-form .form-sub-label {
   display: inherit;
 }
+.jotform-form .form-sub-label.text-muted {
+  color: var(--ad-text-muted) !important;
+}
 
 #input_2 {
   transition: all 0.5s;

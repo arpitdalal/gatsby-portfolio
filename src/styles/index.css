@@ -3,6 +3,7 @@
 body {
   --ad-highlight: #7348f4;
   --ad-text: #0d0d0d;
+  --ad-text-muted: #5d646a;
   --ad-background: #eff0f3;
   --ad-card-background: #eff0f3;
   --ad-box-shadow-dark: #cbcccf;
@@ -17,6 +18,7 @@ body {
 body.dark-mode {
   --ad-highlight: #bd5fff;
   --ad-text: #e6e6e6;
+  --ad-text-muted: #989898;
   --ad-background: #16161a;
   --ad-card-background: #16161a;
   --ad-box-shadow-dark: #0c0c0e;
