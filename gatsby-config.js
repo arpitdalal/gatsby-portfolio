@@ -5,10 +5,10 @@ module.exports = {
     author: `@ArpitDalal6`,
     keywords: `PORTFOLIO, WEB DEVELOPER, JAVASCRIPT, ARPIT, DALAL, ARPIT DALAL, DEVELOPER, WEBSITE, NODEJS, REACT`,
     ogURL: `http://arpitdalal.dev/`,
-    ogImg: `/og-logo-img.png`,
+    ogImg: `/images/og-logo-img.png`,
     ogWidth: `1200`,
     ogHeight: `600`,
-    twitterImg: `/twitter-card-img.png`
+    twitterImg: `/images/twitter-card-img.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,27 +31,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        defaultQuality: 90
-      }
+        defaultQuality: 90,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          'gatsby-remark-static-images'
-        ],
-      }
+        plugins: ["gatsby-remark-static-images"],
+      },
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-5ZM6B4C",
-  
+
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-  
+
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         //
@@ -60,9 +58,9 @@ module.exports = {
           return {
             pageType: window.pageType,
           }
-        }
-      }
+        },
+      },
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
   ],
 }
