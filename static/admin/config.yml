@@ -3,7 +3,7 @@ backend:
   repo: arpitdalal/gatsby-portfolio
   branch: main
 
-media_folder: static/
+media_folder: static/images/
 public_folder: /
 
 collections:
