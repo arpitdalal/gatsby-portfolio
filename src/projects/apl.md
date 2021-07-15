@@ -1,7 +1,7 @@
 ---
-title: Atmiya Premiere League 2020
+title: Atmiya Premiere League
 subtitle: A web platform for a sports league.
-url: http://apl2020.epizy.com/
+url: http://apl.epizy.com/
 gif: apl.webm
 ---
 
