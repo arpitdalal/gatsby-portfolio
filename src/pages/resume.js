@@ -7,8 +7,8 @@ const Resume = () => {
   return (
     <CustomLayout>
       <Seo title="My Resume" />
-      <div class="card-body p-0">
-        <div id="resumeDiv" class="main-div h-100 w-100 p-0">
+      <div className="card-body p-0">
+        <div id="resumeDiv" className="main-div h-100 w-100 p-0">
           <iframe
             title="resume"
             className="w-100 h-100"
