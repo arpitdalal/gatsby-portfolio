@@ -10,12 +10,12 @@ a:hover h3 {
   padding: 0.5rem 0.5rem inherit;
 }
 
-.light-mode .card .projects video,
-.light-mode .card .project video {
+.light-mode .card .projects .project-thumbnail,
+.light-mode .card .project .project-thumbnail {
   box-shadow: 4px 4px 8px rgba(115, 72, 244, 0.6);
 }
 
-.card .projects video,
-.card .project video {
-  box-shadow: 4px 4px 8px  rgba(189, 95, 255, 0.6);
+.card .projects .project-thumbnail,
+.card .project .project-thumbnail {
+  box-shadow: 4px 4px 8px rgba(189, 95, 255, 0.6);
 }

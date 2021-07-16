@@ -1,3 +1,7 @@
+.project-thumbnail {
+  border-radius: 8px 8px 0px 0px;
+}
+
 .browser-svg {
   border-radius: 8px 8px 0px 0px;
   background-color: var(--ad-browser-color);

@@ -4,7 +4,7 @@ import "./projectThumbnail.css"
 
 const ProjectThumbnail = ({ url }) => {
   return (
-    <div class="anim">
+    <div className="project-thumbnail anim d-flex flex-column align-items-start justify-content-start mt-2">
       <svg
         width="100%"
         height="100%"
