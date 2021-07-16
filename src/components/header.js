@@ -234,7 +234,7 @@ const Header = ({ setTheme }) => {
               LinkedIn
             </a>
             <a
-              href="https://codepen.io/arpitdalalm"
+              href="https://codepen.io/arpitdalal"
               rel="noopener noreferrer"
               className="social-link codepen"
               target="_blank"
