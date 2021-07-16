@@ -46,14 +46,14 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
       )}
       {svg && (
         <svg
-          class="pt-2"
-          dataName="page"
+          className="pt-2"
+          data-name="page"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 537 272.86"
         >
-          <g dataName="div3">
+          <g data-name="div3">
             <rect
-              class="skeleton-div"
+              className="skeleton-div"
               x="0.34"
               y="142.86"
               width="259"
@@ -61,7 +61,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="8"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="55.34"
               y="147.86"
               width="149"
@@ -69,7 +69,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="24.34"
               y="175.86"
               width="211"
@@ -77,7 +77,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="8"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="24.34"
               y="246.86"
               width="101"
@@ -85,7 +85,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="134.34"
               y="246.86"
               width="101"
@@ -93,9 +93,9 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
           </g>
-          <g dataName="div2">
+          <g data-name="div2">
             <rect
-              class="skeleton-div"
+              className="skeleton-div"
               x="278"
               y="71"
               width="259"
@@ -103,7 +103,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="8"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="333"
               y="76"
               width="149"
@@ -111,7 +111,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="302"
               y="104"
               width="211"
@@ -119,7 +119,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="8"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="302"
               y="175"
               width="101"
@@ -127,7 +127,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="412"
               y="175"
               width="101"
@@ -135,10 +135,10 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
           </g>
-          <g dataName="div1">
-            <rect class="skeleton-div" width="259" height="130" rx="8" />
+          <g data-name="div1">
+            <rect className="skeleton-div" width="259" height="130" rx="8" />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="55"
               y="5"
               width="149"
@@ -146,7 +146,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="24"
               y="33"
               width="211"
@@ -154,7 +154,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="8"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="24"
               y="104"
               width="101"
@@ -162,7 +162,7 @@ const ProjectThumbnail = ({ url = null, svg = null }) => {
               rx="10"
             />
             <rect
-              class="skeleton-sub-div"
+              className="skeleton-sub-div"
               x="134"
               y="104"
               width="101"

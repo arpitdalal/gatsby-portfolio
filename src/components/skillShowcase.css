@@ -1,8 +1,12 @@
 .skill-icon {
+  background-color: var(--ad-browser-color);
+  padding: .5rem;
+  border-radius: 50%;
   margin: 1rem;
+  transition: background-color 0.5s;
 }
 
 .skill-icon svg {
-  width: 3rem;
-  height: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
 }
