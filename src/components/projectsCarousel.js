@@ -2,7 +2,6 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import SwiperCore, { Navigation, Pagination, A11y } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { StaticImage } from "gatsby-plugin-image"
 import "swiper/swiper-bundle.css"
 
 import ProjectThumbnail from "./projectThumbnail"
