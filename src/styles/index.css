@@ -12,6 +12,7 @@ body {
   --ad-icon: #7348f4;
   --ad-icon-background: #eff0f3;
   --ad-browser-color: #e8e8e8;
+  --ad-browser-dark-color: #ccc;
   --ad-card-shadow: 0 4px 8px 0 rgb(179, 179, 179), 0 6px 20px 0 rgb(179, 179, 179);
 }
 
@@ -27,6 +28,7 @@ body.dark-mode {
   --ad-icon: #bd5fff;
   --ad-icon-background: #fffffe;
   --ad-browser-color: #36383a;
+  --ad-browser-dark-color: #232425;
   --ad-card-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
 }
 

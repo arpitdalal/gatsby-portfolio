@@ -7,3 +7,13 @@
   background-color: var(--ad-browser-color);
   transition: background-color 0.5s;
 }
+
+svg .skeleton-div {
+  fill: var(--ad-browser-color);
+  transition: fill 0.5s;
+}
+
+svg .skeleton-sub-div {
+  fill: var(--ad-browser-dark-color);
+  transition: fill 0.5s;
+}

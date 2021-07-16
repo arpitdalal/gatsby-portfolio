@@ -11,7 +11,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.64em"
             height="1em"
@@ -152,32 +152,32 @@ function SkillShowcase() {
                   <path d="M3.12 29.934C1.272 30.974 0 32.94 0 35.02v56.286c0 2.08 1.387 4.045 3.12 5.085l48.889 28.085c1.156.693 2.427.925 3.814.693L3.467 29.818l-.346.116z" />
                   <path
                     fill="url(#IconifyId-17aabc0c2a3-616606-68)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M50.391.809l-.693.347h.924l-.231-.347z"
                     transform="translate(0 -9.246)"
                   />
                   <path
                     d="M106.792 105.636c1.387-.809 2.427-2.196 2.89-3.698L56.053 10.402c-1.387-.231-2.89-.116-4.16.693L3.351 39.065l52.355 95.465a8.057 8.057 0 0 0 2.196-.693l48.889-28.2z"
                     fill="url(#IconifyId-17aabc0c2a3-616606-69)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     transform="translate(0 -9.246)"
                   />
                   <path
                     fill="url(#IconifyId-17aabc0c2a3-616606-70)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M111.3 104.712l-.347-.578v.809l.346-.231z"
                     transform="translate(0 -9.246)"
                   />
                   <path
                     d="M106.792 105.636l-48.773 28.085a6.973 6.973 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814z"
                     fill="url(#IconifyId-17aabc0c2a3-616606-71)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     transform="translate(0 -9.246)"
                   />
                   <path
                     d="M106.792 105.636l-48.773 28.085a6.973 6.973 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814z"
                     fill="url(#IconifyId-17aabc0c2a3-616606-72)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     transform="translate(0 -9.246)"
                   />
                 </g>
@@ -219,7 +219,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.66em"
             height="1em"
@@ -238,7 +238,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -261,7 +261,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.9em"
             height="1em"
@@ -277,9 +277,9 @@ function SkillShowcase() {
                 gradientTransform="matrix(.463 0 0 .463 76.464 81.918)"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#fff" />
-                <stop offset=".5" stop-color="#4c6b97" />
-                <stop offset="1" stop-color="#231f20" />
+                <stop offset="0" stopColor="#fff" />
+                <stop offset=".5" stopColor="#4c6b97" />
+                <stop offset="1" stopColor="#231f20" />
               </radialGradient>
             </defs>
             <ellipse
@@ -307,7 +307,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.01em"
             height="1em"
@@ -326,7 +326,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -350,7 +350,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -389,7 +389,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -432,7 +432,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.34em"
             height="1em"
@@ -451,7 +451,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -470,7 +470,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.05em"
             height="1em"
@@ -489,14 +489,14 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="4.42em"
             height="1em"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 512 116"
           >
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <path
                 d="M489.718 8.646l21.42.118s-39.824 53.964-43.076 58.362c-1.056 1.424-2.66 2.96-3.474 4.864c-2.057 4.786-4.169 15.285-4.169 15.285l-19.599.098s3.05-10.944 2.924-16.773c-.11-5.092-2.71-10.178-4.168-15.285c-1.474-5.17-3.475-15.286-3.475-15.286h20.15l2.779 11.117l30.688-42.5"
                 fill="#1A1918"
@@ -542,7 +542,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -593,7 +593,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -616,7 +616,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.26em"
             height="1em"
@@ -644,7 +644,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -659,8 +659,8 @@ function SkillShowcase() {
                 y2="37.864%"
                 id="IconifyId-17aabcd0bc1-73501e-170"
               >
-                <stop stop-color="#4285EB" offset="0%" />
-                <stop stop-color="#2EC7FF" offset="100%" />
+                <stop stopColor="#4285EB" offset="0%" />
+                <stop stopColor="#2EC7FF" offset="100%" />
               </linearGradient>
               <linearGradient
                 x1="69.644%"
@@ -669,9 +669,9 @@ function SkillShowcase() {
                 y2="108.457%"
                 id="IconifyId-17aabcd0bc1-73501e-171"
               >
-                <stop stop-color="#29CDFF" offset="0%" />
-                <stop stop-color="#148EFF" offset="37.86%" />
-                <stop stop-color="#0A60FF" offset="100%" />
+                <stop stopColor="#29CDFF" offset="0%" />
+                <stop stopColor="#148EFF" offset="37.86%" />
+                <stop stopColor="#0A60FF" offset="100%" />
               </linearGradient>
               <linearGradient
                 x1="69.691%"
@@ -680,9 +680,9 @@ function SkillShowcase() {
                 y2="117.391%"
                 id="IconifyId-17aabcd0bc1-73501e-172"
               >
-                <stop stop-color="#FA816E" offset="0%" />
-                <stop stop-color="#F74A5C" offset="41.473%" />
-                <stop stop-color="#F51D2C" offset="100%" />
+                <stop stopColor="#FA816E" offset="0%" />
+                <stop stopColor="#F74A5C" offset="41.473%" />
+                <stop stopColor="#F51D2C" offset="100%" />
               </linearGradient>
               <linearGradient
                 x1="68.128%"
@@ -691,12 +691,12 @@ function SkillShowcase() {
                 y2="114.943%"
                 id="IconifyId-17aabcd0bc1-73501e-173"
               >
-                <stop stop-color="#FA8E7D" offset="0%" />
-                <stop stop-color="#F74A5C" offset="51.264%" />
-                <stop stop-color="#F51D2C" offset="100%" />
+                <stop stopColor="#FA8E7D" offset="0%" />
+                <stop stopColor="#F74A5C" offset="51.264%" />
+                <stop stopColor="#F51D2C" offset="100%" />
               </linearGradient>
             </defs>
-            <g fill-rule="nonzero" fill="none">
+            <g fillRule="nonzero" fill="none">
               <path
                 d="M116.85 4.545L4.53 116.775a15.396 15.396 0 0 0 0 21.812L116.85 250.816c6.039 6.033 15.792 6.033 21.83 0l47.095-47.056c5.408-5.404 5.408-14.165 0-19.568c-5.408-5.404-14.176-5.404-19.584 0l-35.702 35.672c-1.503 1.502-3.784 1.502-5.287 0l-89.696-89.622c-1.503-1.502-1.503-3.781 0-5.283l89.696-89.623c1.503-1.501 3.784-1.501 5.287 0l35.702 35.673c5.408 5.404 14.176 5.404 19.584 0c5.408-5.404 5.408-14.164 0-19.568l-47.09-47.05c-6.063-5.904-15.82-5.856-21.835.154z"
                 fill="url(#IconifyId-17aabcd0bc1-73501e-170)"
@@ -725,7 +725,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="2.38em"
             height="1em"
@@ -756,7 +756,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1.03em"
             height="1em"
@@ -775,7 +775,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -790,8 +790,8 @@ function SkillShowcase() {
                 y2="97.438%"
                 id="IconifyId-17aabce7780-128612-184"
               >
-                <stop stop-color="#0052CC" offset="0%" />
-                <stop stop-color="#2684FF" offset="92.3%" />
+                <stop stopColor="#0052CC" offset="0%" />
+                <stop stopColor="#2684FF" offset="92.3%" />
               </linearGradient>
             </defs>
             <path
@@ -810,7 +810,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="0.89em"
             height="1em"
@@ -820,7 +820,7 @@ function SkillShowcase() {
             <path
               d="M152.576 32.963l59.146 34.15a25.819 25.819 0 0 1 5.818-4.604c12.266-7.052 27.912-2.865 35.037 9.402c7.052 12.267 2.865 27.912-9.402 35.037a25.698 25.698 0 0 1-6.831 2.72v68.325a25.7 25.7 0 0 1 6.758 2.702c12.34 7.125 16.527 22.771 9.402 35.038c-7.052 12.266-22.771 16.453-35.038 9.402a25.464 25.464 0 0 1-6.34-5.147l-58.786 33.94a25.671 25.671 0 0 1 1.295 8.08c0 14.103-11.458 25.636-25.635 25.636c-14.177 0-25.635-11.46-25.635-25.636c0-2.52.362-4.954 1.037-7.253l-59.13-34.14a25.824 25.824 0 0 1-5.738 4.52c-12.34 7.051-27.986 2.864-35.038-9.402c-7.051-12.267-2.864-27.913 9.402-35.038a25.71 25.71 0 0 1 6.758-2.703v-68.324a25.698 25.698 0 0 1-6.831-2.72C.558 99.897-3.629 84.178 3.423 71.911c7.052-12.267 22.77-16.454 35.037-9.402a25.82 25.82 0 0 1 5.79 4.575l59.163-34.159a25.707 25.707 0 0 1-1.048-7.29C102.365 11.46 113.823 0 128 0c14.177 0 25.635 11.459 25.635 25.635c0 2.548-.37 5.007-1.059 7.328zm-6.162 10.522l59.287 34.23a25.599 25.599 0 0 0 2.437 19.831c3.609 6.278 9.488 10.44 16.013 12.062v68.41c-.333.081-.664.17-.993.264L145.725 44.17c.234-.224.464-.452.689-.684zm-36.123.7l-77.432 134.11a25.824 25.824 0 0 0-1.01-.27v-68.417c6.525-1.622 12.404-5.784 16.013-12.062a25.6 25.6 0 0 0 2.427-19.869l59.27-34.22c.239.247.483.49.732.727zm24.872 6.075l77.414 134.08a25.492 25.492 0 0 0-4.513 5.757a25.7 25.7 0 0 0-2.702 6.758H50.64a25.71 25.71 0 0 0-2.704-6.758a25.825 25.825 0 0 0-4.506-5.724l77.429-134.107A25.715 25.715 0 0 0 128 51.27c2.487 0 4.89-.352 7.163-1.01zm11.795 194.478l58.902-34.008a25.865 25.865 0 0 1-.473-1.682H50.607c-.082.333-.171.663-.266.992l59.19 34.175A25.558 25.558 0 0 1 128 236.373a25.564 25.564 0 0 1 18.958 8.365z"
               fill="#E535AB"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </div>
@@ -830,7 +830,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -849,7 +849,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -872,7 +872,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -1215,7 +1215,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="1em"
             height="1em"
@@ -1225,12 +1225,12 @@ function SkillShowcase() {
             <path
               d="M8.785 6.865a3.055 3.055 0 0 0-.785.1V7h.038a6.461 6.461 0 0 0 .612.785c.154.306.288.611.441.917l.038-.039a1.074 1.074 0 0 0 .4-.957a4.314 4.314 0 0 1-.23-.4c-.115-.191-.364-.287-.517-.44"
               fill="#5d87a1"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
             <path
               d="M27.78 23.553a8.849 8.849 0 0 0-3.712.536c-.287.115-.745.115-.785.478c.154.153.172.4.307.613a4.467 4.467 0 0 0 .995 1.167c.4.306.8.611 1.225.879c.745.461 1.588.728 2.314 1.187c.422.268.842.612 1.264.9c.21.153.343.4.611.5v-.058a3.844 3.844 0 0 0-.291-.613c-.191-.19-.383-.363-.575-.554a9.118 9.118 0 0 0-1.99-1.932c-.613-.422-1.953-1-2.2-1.7l-.039-.039a7.69 7.69 0 0 0 1.321-.308c.65-.172 1.243-.133 1.912-.3c.307-.077.862-.268.862-.268v-.3c-.342-.34-.587-.795-.947-1.116a25.338 25.338 0 0 0-3.122-2.328c-.587-.379-1.344-.623-1.969-.946c-.226-.114-.6-.17-.737-.36a7.594 7.594 0 0 1-.776-1.457a46.84 46.84 0 0 1-1.551-3.293a20.236 20.236 0 0 0-.965-2.157A19.078 19.078 0 0 0 11.609 5a9.07 9.07 0 0 0-2.421-.776c-.474-.02-.946-.057-1.419-.075a7.55 7.55 0 0 1-.869-.664C5.818 2.8 3.038 1.328 2.242 3.277C1.732 4.508 3 5.718 3.435 6.343A8.866 8.866 0 0 1 4.4 7.762c.133.322.171.663.3 1a22.556 22.556 0 0 0 .987 2.538a8.946 8.946 0 0 0 .7 1.172c.153.209.417.3.474.645a5.421 5.421 0 0 0-.436 1.419a8.336 8.336 0 0 0 .549 6.358c.3.473 1.022 1.514 1.987 1.116c.851-.34.662-1.419.908-2.364c.056-.229.019-.379.132-.53v.184s.483 1.061.723 1.6a10.813 10.813 0 0 0 2.4 2.59A3.514 3.514 0 0 1 14 24.657V25h.427a1.054 1.054 0 0 0-.427-.788a9.4 9.4 0 0 1-.959-1.16a24.992 24.992 0 0 1-2.064-3.519c-.3-.6-.553-1.258-.793-1.857c-.11-.231-.11-.58-.295-.7a7.266 7.266 0 0 0-.884 1.313a11.419 11.419 0 0 0-.517 2.921c-.073.02-.037 0-.073.038c-.589-.155-.792-.792-1.014-1.332a8.756 8.756 0 0 1-.166-5.164c.128-.405.683-1.681.461-2.068c-.111-.369-.48-.58-.682-.871a7.767 7.767 0 0 1-.663-1.237C5.912 9.5 5.69 8.3 5.212 7.216a10.4 10.4 0 0 0-.921-1.489A9.586 9.586 0 0 1 3.276 4.22c-.092-.213-.221-.561-.074-.793a.3.3 0 0 1 .259-.252c.238-.212.921.058 1.16.174a9.2 9.2 0 0 1 1.824.967c.258.194.866.685.866.685h.18c.612.133 1.3.037 1.876.21a12.247 12.247 0 0 1 2.755 1.32a16.981 16.981 0 0 1 5.969 6.545c.23.439.327.842.537 1.3c.4.94.9 1.9 1.3 2.814a12.578 12.578 0 0 0 1.36 2.564c.286.4 1.435.612 1.952.822a13.7 13.7 0 0 1 1.32.535c.651.4 1.3.861 1.913 1.3c.305.23 1.262.708 1.32 1.091"
               fill="#00758f"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </div>
@@ -1240,14 +1240,14 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="3.51em"
             height="1em"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 512 146"
           >
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <path
                 d="M476.713 60.463c-.46.092-.922 1.107-.922 1.66c-.092 3.692-.184 13.474-.184 20.118c0 .185.276.554.553.554c1.384.092 4.706.184 7.567.184c3.968 0 6.275-.553 7.568-1.106c3.321-1.662 4.89-5.261 4.89-9.23c0-8.95-6.275-12.365-15.596-12.365c-.646-.092-2.49-.092-3.876.185zm23.81 41.25c0-9.136-6.737-14.212-18.918-14.212c-.554 0-4.43-.092-5.353.092c-.277.093-.645.278-.645.555c0 6.551-.093 16.98.184 21.04c.184 1.753 1.477 4.245 3.046 4.983c1.66.923 5.444 1.107 8.028 1.107c7.29 0 13.658-4.06 13.658-13.565zm-42.634-46.325c.922 0 3.69.276 10.796.276c6.737 0 12.089-.184 18.641-.184c8.028 0 19.102 2.86 19.102 14.857c0 5.906-4.153 10.613-9.597 12.92c-.276.092-.276.276 0 .368c7.751 1.939 14.581 6.737 14.581 15.78c0 8.86-5.537 14.489-13.566 17.996c-4.891 2.122-10.981 2.86-17.164 2.86c-4.707 0-17.349-.553-24.362-.368c-.738-.278.646-3.6 1.291-4.153c1.662-.093 2.953-.185 4.707-.739c2.492-.645 2.768-1.384 3.137-5.167c.185-3.23.185-14.674.185-22.794c0-11.166.093-18.733 0-22.424c-.092-2.86-1.107-3.784-3.137-4.338c-1.57-.276-4.153-.646-6.276-.922c-.462-.462 1.107-3.6 1.662-3.968zm-53.248 57.399c2.216 1.752 6.553 2.49 10.429 2.49c4.983 0 9.966-.921 14.765-5.26c4.891-4.428 8.305-11.257 8.305-22.146c0-10.429-3.968-18.919-12.089-23.901c-4.614-2.862-10.52-4.06-17.349-4.06c-2.03 0-3.968.092-5.167.645c-.278.185-.923 1.015-.923 1.476c-.185 1.846-.185 16.057-.185 24.363c0 8.582 0 20.579.185 21.963c0 1.385.645 3.507 2.03 4.43zm-20.948-57.4c1.754 0 8.49.277 11.72.277c5.815 0 9.967-.276 20.948-.276c9.228 0 16.98 2.491 22.517 7.197c6.736 5.814 10.244 13.843 10.244 23.624c0 13.935-6.368 21.964-12.736 26.578c-6.366 4.706-14.672 7.474-26.484 7.474c-6.275 0-17.072-.184-26.024-.277h-.092c-.461-.83.738-4.06 1.476-4.152c2.4-.277 3.046-.37 4.246-.83c1.937-.739 2.307-1.754 2.584-5.168c.276-6.368.184-14.027.184-22.702c0-6.182.092-18.272-.093-22.148c-.276-3.229-1.66-4.06-4.429-4.614c-1.384-.276-3.23-.646-5.813-.922c-.37-.647 1.291-3.507 1.752-4.06z"
                 fill="#8E714E"
@@ -1289,7 +1289,7 @@ function SkillShowcase() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            ariaHidden="true"
+            aira-hidden="true"
             focusable="false"
             width="0.97em"
             height="1em"

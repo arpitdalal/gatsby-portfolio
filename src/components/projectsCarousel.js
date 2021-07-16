@@ -55,8 +55,8 @@ const ProjectsCarousel = () => {
       <SwiperSlide>
         <div className="swiper-scrollbar"></div>
         <Link className="project-links" to="/projects/">
-          <ProjectThumbnail url="/billboard.jpg" />
-          <h4 className="mt-2">All Projects</h4>
+          <ProjectThumbnail svg="skeleton" />
+          <h4 className="mt-2">My Work</h4>
         </Link>
       </SwiperSlide>
     </Swiper>
