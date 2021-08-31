@@ -14,8 +14,8 @@ const Me = () => {
         <div id="meDiv" className="main-div">
             <h1 className="text-center anim">Who am I?</h1>
             <div className="about-me text-left d-flex justify-content-start">
-              <div className="about-img-container mr-3">
-                <StaticImage className="d-none d-lg-block img-dk anim" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" width={300} placeholder="blurred" />
+              <div className="about-img-container d-none d-lg-block mr-3">
+                <StaticImage className="img-dk anim" src="../images/arpit-thumbnail.jpg" alt="Arpit Dalal's Portrait Image" width={300} placeholder="blurred" />
               </div>
               <div>
                 <p className="anim">Hello<span role="img" aria-label="Waving hand emoji">👋</span>! My name is Arpit Dalal.</p>
