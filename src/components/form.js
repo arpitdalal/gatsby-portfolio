@@ -204,12 +204,12 @@ const Form = () => {
               </div>
             </li>
             <li
-              className="form-line jf-required"
+              className="form-line anim jf-required"
               data-type="control_captcha"
               id="id_12"
             >
               <label
-                className="form-label form-label-top"
+                className="form-label form-label-left form-label-auto"
                 id="label_12"
                 htmlFor="input_12"
               >
