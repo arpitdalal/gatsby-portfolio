@@ -4,6 +4,7 @@ subtitle: A web platform for a sports league.
 url: http://apl.epizy.com/
 thumbnail: /ss3.png
 ---
+
 <h6 class="mt-3">A web platform for a sports league.</h6>
 
 <div class="text-left details mt-5">

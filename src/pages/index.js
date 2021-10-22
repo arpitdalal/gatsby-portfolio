@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import Lottie from "react-lottie-player"
+import lottieJson from "../../static/lottie.json"
 
 import CustomLayout from "../components/layout"
 import Seo from "../components/seo"
@@ -10,7 +12,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
 const IndexPage = () => {
-
   return (
     <CustomLayout>
       <Seo title="Home" />
@@ -40,12 +41,12 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="col-lg-6 d-none d-lg-block">
-            <lottie-player
-              autoplay
+            <Lottie
+              play
               loop
               mode="normal"
               background="transparent"
-              src="https://assets3.lottiefiles.com/packages/lf20_iorpbol0.json"
+              animationData={lottieJson}
               style={{ height: "300px" }}
             />
           </div>

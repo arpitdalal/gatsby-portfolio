@@ -17,7 +17,7 @@ const Form = () => {
   }
 
   React.useEffect(() => {
-    <Helmet>
+    ;<Helmet>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
       <script
         src="https://cdn.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.20399"

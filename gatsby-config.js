@@ -56,8 +56,8 @@ Date.prototype.toW3CString = function () {
 }
 
 function formattedDate() {
-  const date = new Date();
-  return date.toW3CString();
+  const date = new Date()
+  return date.toW3CString()
 }
 
 module.exports = {

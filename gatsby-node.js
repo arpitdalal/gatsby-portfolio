@@ -4,18 +4,18 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-const path = require('path')
+const path = require("path")
 
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if(node.internal.type === 'MarkdownRemark') {
-    const slug = path.basename(node.fileAbsolutePath, '.md')
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = path.basename(node.fileAbsolutePath, ".md")
 
     createNodeField({
       node,
-      name: 'slug',
-      value: slug
+      name: "slug",
+      value: slug,
     })
   }
 }
@@ -42,8 +42,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
       component: projectTemplate,
       path: `/projects/${edge.node.fields.slug}`,
       context: {
-        slug: edge.node.fields.slug
-      }
+        slug: edge.node.fields.slug,
+      },
     })
   })
 }
