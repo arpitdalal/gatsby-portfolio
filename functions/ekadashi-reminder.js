@@ -184,23 +184,6 @@ function sendNotification(ekadashi) {
         )}</i></strong> 🍇🍎🥗`,
       }
 
-      // fetch(
-      //   `https://api.telegram.org/bot1976572530:AAEy4TM0TBFTdbJIOiyB5um-iAlKXccqcZU/sendMessage`,
-      //   {
-      //     method: "post",
-      //     body: JSON.stringify(data),
-      //     headers: { "Content-Type": "application/json" },
-      //   }
-      // )
-      //   .then(res => {
-      //     console.log(res.json())
-      //     return resolve("done!")
-      //   })
-      //   .catch(err => {
-      //     console.error(err)
-      //     return reject(err)
-      //   })
-
       request(
         {
           uri: `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
