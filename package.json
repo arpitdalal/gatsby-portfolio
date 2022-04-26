@@ -21,12 +21,14 @@
     "gatsby-transformer-sharp": "^3.0.0",
     "gsap": "^3.6.1",
     "netlify-cms-app": "^2.14.38",
+    "nodemailer": "^6.7.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-lottie-player": "^1.4.1",
+    "request": "^2.88.2",
     "swiper": "^6.5.4"
   },
   "devDependencies": {
@@ -40,7 +42,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "netlify dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
