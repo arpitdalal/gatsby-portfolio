@@ -35,7 +35,7 @@ body.dark-mode {
 .main {
   background: var(--ad-background);
   color: var(--ad-text) !important;
-  transition: background 0.5s, box-shadow0.5s;
+  transition: background 0.5s, box-shadow 0.5s;
 }
 
 .my-container {
@@ -187,14 +187,14 @@ p+p {
 
 .left-div {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
 }
 
 .right-div {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
 }

@@ -1,12 +1,16 @@
+import "./header.css"
+
 import React, { useState } from "react"
+
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Navbar, Nav } from "react-bootstrap"
+import {
+  Nav,
+  Navbar,
+} from "react-bootstrap"
 
-import ToggleMobile from "./toggleMobile"
 import ToggleDesktop from "./toggleDesktop"
-
-import "./header.css"
+import ToggleMobile from "./toggleMobile"
 
 const Header = ({ setTheme }) => {
   const [toggleClass, setToggleClass] = useState(false)
@@ -19,7 +23,7 @@ const Header = ({ setTheme }) => {
     <header>
       <div className="mobile mobile-header d-block d-lg-none">
         <div className="d-flex flex-column container-div">
-          <Navbar expand="lg" className="w-100 fixed-top">
+          <Navbar expand="lg" className="w-100 fixed-top px-3">
             <Navbar.Brand
               href="/"
               className="d-flex flex-row align-items-center"

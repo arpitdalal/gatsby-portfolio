@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Helmet } from "react-helmet"
 
 const Form = () => {
@@ -238,12 +239,12 @@ const Form = () => {
               <div id="cid_2" className="form-input-wide">
                 <div
                   data-align="left"
-                  className="text-left form-buttons-wrapper form-buttons-left jsTest-button-wrapperField"
+                  className="text-start form-buttons-wrapper form-buttons-left jsTest-button-wrapperField"
                 >
                   <button
                     id="input_2"
                     type="submit"
-                    className="ml-0 form-submit-button button submit-button jf-form-buttons jsTest-submitField px-5 py-2"
+                    className="ms-0 form-submit-button button submit-button jf-form-buttons jsTest-submitField px-5 py-2"
                     data-component="button"
                     data-content=""
                   >

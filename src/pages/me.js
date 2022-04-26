@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -10,7 +11,7 @@ const Me = () => {
     <CustomLayout>
       <Seo title="About Me" />
       <StaticImage
-        className="card-img-top d-lg-none img-mob"
+        className="card-img-top d-lg-none img-mob flex-shrink-0"
         src="../images/arpit-thumbnail.jpg"
         alt="Arpit Dalal's Portrait Image"
         placeholder="blurred"
@@ -18,8 +19,8 @@ const Me = () => {
       <div className="card-body">
         <div id="meDiv" className="main-div">
           <h1 className="text-center anim">Who am I?</h1>
-          <div className="about-me text-left d-flex justify-content-start">
-            <div className="about-img-container d-none d-lg-block mr-3">
+          <div className="about-me text-start d-flex justify-content-start">
+            <div className="about-img-container d-none d-lg-block me-3">
               <StaticImage
                 className="img-dk anim"
                 src="../images/arpit-thumbnail.jpg"
@@ -53,7 +54,7 @@ const Me = () => {
               {/* <p>An unusual fact about me is that I love to follow rules.</p> */}
             </div>
           </div>
-          <div className="my-goals text-left mt-5">
+          <div className="my-goals text-start mt-5">
             <h2 className="text-center anim">My Goals</h2>
             <div>
               <p className="anim">
@@ -67,7 +68,7 @@ const Me = () => {
               </p>
             </div>
           </div>
-          <div className="my-journey text-left mt-5">
+          <div className="my-journey text-start mt-5">
             <h2 className="text-center anim">My Journey</h2>
             <div>
               <p className="anim">
@@ -92,7 +93,7 @@ const Me = () => {
               </p>
             </div>
           </div>
-          <div className="my-today text-left mt-5">
+          <div className="my-today text-start mt-5">
             <h2 className="text-center anim">Where do I stand today?</h2>
             <div>
               <p className="anim">

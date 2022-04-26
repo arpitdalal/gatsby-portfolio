@@ -1,12 +1,17 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-
-import CustomLayout from "../components/layout"
-import Seo from "../components/seo"
-import ProjectThumbnail from "../components/projectThumbnail"
-
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./projects.css"
+
+import React from "react"
+
+import {
+  graphql,
+  Link,
+  useStaticQuery,
+} from "gatsby"
+
+import CustomLayout from "../components/layout"
+import ProjectThumbnail from "../components/projectThumbnail"
+import Seo from "../components/seo"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +49,7 @@ const Projects = () => {
                     className={`project anim${
                       index % 2 !== 0 ? " special-project" : ""
                     }`}
-                    key={index}
+                    key={edge.node.fields.slug}
                   >
                     <Link to={`/projects/${edge.node.fields.slug}`}>
                       <h3>{edge.node.frontmatter.title}</h3>
@@ -69,14 +74,14 @@ const Projects = () => {
                           >
                             Go to project details
                           </Link>
-                          <Link
+                          <a
                             className="cta cta-secondary"
                             rel="noopener noreferrer nofollow"
                             to={edge.node.frontmatter.url}
                             target="_blank"
                           >
                             Go to Site
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>

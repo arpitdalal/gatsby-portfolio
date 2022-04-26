@@ -6,7 +6,7 @@ thumbnail: /cheapresume.png
 ---
 
 <h6 class="mt-3">A resume/cover-letter building service provider.</h6>
-<div class="text-left details mt-5">
+<div class="text-start details mt-5">
   <h6>Overview</h6>
   <p>I solely built a brand identity including a logo, website, graphics, and advertisement props in under 35 hours in 2020.</p>
   <h6 class="mt-3">Services provided</h6>

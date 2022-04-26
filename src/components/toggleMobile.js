@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useRef } from "react"
-
 import "./toggle.css"
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 
 const ToggleMobile = ({ setTheme }) => {
   const lightMode = "light-mode"
@@ -50,7 +54,7 @@ const ToggleMobile = ({ setTheme }) => {
       <div className="d-flex flex-row align-items-center justify-content-start">
         <span id="toggle-title">{title}</span>
         <div className="toggle">
-          <label className="sr-only" htmlFor="toggleThemeMobile">
+          <label className="visually-hidden" htmlFor="toggleThemeMobile">
             {title}
           </label>
           <input

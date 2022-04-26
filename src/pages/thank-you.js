@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Link } from "gatsby"
 
 import CustomLayout from "../components/layout"
@@ -21,7 +22,7 @@ const ThankYou = () => {
             </a>
           </h5>
           <h2 className="d-flex justify-content-center anim">
-            <span className="mr-1">Cheers!</span>
+            <span className="me-1">Cheers!</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 64 64"

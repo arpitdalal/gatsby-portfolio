@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useRef } from "react"
-
 import "./toggle.css"
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 
 const ToggleDesktop = ({ setTheme }) => {
   const [title, setTitle] = useState("Change to dark theme")
@@ -47,7 +51,7 @@ const ToggleDesktop = ({ setTheme }) => {
       title={title}
     >
       <div className="toggle">
-        <label className="sr-only" htmlFor="toggleThemeDesktop">
+        <label className="visually-hidden" htmlFor="toggleThemeDesktop">
           {title}
         </label>
         <input

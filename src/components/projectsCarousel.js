@@ -1,13 +1,27 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import SwiperCore, { Navigation, Pagination, A11y } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/swiper-bundle.css"
-
-import ProjectThumbnail from "./projectThumbnail"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/a11y"
 import "./projectCarousel.css"
 
-SwiperCore.use([Navigation, Pagination, A11y])
+import React from "react"
+
+import {
+  graphql,
+  Link,
+  useStaticQuery,
+} from "gatsby"
+import {
+  A11y,
+  Navigation,
+  Pagination,
+} from "swiper"
+import {
+  Swiper,
+  SwiperSlide,
+} from "swiper/react"
+
+import ProjectThumbnail from "./projectThumbnail"
 
 const ProjectsCarousel = () => {
   const data = useStaticQuery(graphql`
@@ -37,10 +51,11 @@ const ProjectsCarousel = () => {
       pagination={{
         type: "progressbar",
       }}
+      modules={[Navigation, Pagination, A11y]}
     >
-      {data.allMarkdownRemark.edges.map((edge, index) => {
+      {data.allMarkdownRemark.edges.map(edge => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={edge.node.fields.slug}>
             <div className="swiper-scrollbar"></div>
             <Link
               className="project-links"

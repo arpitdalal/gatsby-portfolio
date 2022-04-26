@@ -1,21 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
-import Lottie from "react-lottie-player"
-import lottieJson from "../../static/lottie.json"
-
-import CustomLayout from "../components/layout"
-import Seo from "../components/seo"
-import ProjectsCarousel from "../components/projectsCarousel"
-import SkillShowcase from "../components/skillShowcase"
-
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
+
+import React from "react"
+
+import { Link } from "gatsby"
+import Lottie from "react-lottie-player"
+
+import lottieJson from "../../static/lottie.json"
+import CustomLayout from "../components/layout"
+import ProjectsCarousel from "../components/projectsCarousel"
+import Seo from "../components/seo"
+import SkillShowcase from "../components/skillShowcase"
 
 const IndexPage = () => {
   return (
     <CustomLayout>
       <Seo title="Home" />
-      <div className="card-body text-left">
+      <div className="card-body text-start">
         <div className="row mx-0 anim">
           <div className="col-lg-6">
             <div className="h-100 d-flex flex-column justify-content-center">
