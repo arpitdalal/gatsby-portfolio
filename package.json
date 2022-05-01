@@ -53,5 +53,8 @@
   },
   "bugs": {
     "url": "https://github.com/arpitdalal/gatsby-portfolio/issues"
+  },
+  "engines": {
+    "node": ">=14.x"
   }
 }
