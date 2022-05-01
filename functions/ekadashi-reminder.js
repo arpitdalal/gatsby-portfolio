@@ -110,6 +110,7 @@ exports.handler = async function () {
     month: "short",
   })
   const currentDay = todaysDate.getDate()
+  const currentDate = `${currentMonth} ${currentDay}`
 
   if (EKADASHIS.length === 0) {
     const messageOptions = {
@@ -133,10 +134,7 @@ exports.handler = async function () {
   for (let i = 0; i < EKADASHIS.length; i++) {
     const ekadashi = EKADASHIS[i]
 
-    if (
-      ekadashi.date.toLowerCase().includes(currentMonth.toLowerCase()) &&
-      ekadashi.date.includes(currentDay)
-    ) {
+    if (ekadashi.date.toLowerCase() === currentDate.toLowerCase()) {
       return await sendNotification(ekadashi)
         .then(() => {
           console.log(`Notification sent for ${ekadashi.title}`)
