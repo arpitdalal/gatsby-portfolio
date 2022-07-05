@@ -15,9 +15,22 @@ exports.handler = async function () {
     transporter.sendMail(messageOptions, err => {
       if (err) {
         console.log(`Email error: ${err}`)
+        return {
+          statusCode: 500,
+          body: "Something went wrong",
+        }
+      } else {
+        return {
+          statusCode: 200,
+          body: "Notification sent",
+        }
       }
     })
   } catch (error) {
     console.log("Error: ", error)
+    return {
+      statusCode: 500,
+      body: "Something went wrong",
+    }
   }
 }
