@@ -12,7 +12,7 @@ exports.handler = async function () {
     text: "US Visa dates available at Toronto office",
   }
   try {
-    transporter.sendMail(messageOptions, err => {
+    return transporter.sendMail(messageOptions, err => {
       if (err) {
         console.log(`Email error: ${err}`)
         return {
