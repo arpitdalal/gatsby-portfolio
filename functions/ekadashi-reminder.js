@@ -60,7 +60,7 @@ const EKADASHIS = [
   },
   {
     title: "Pavitra Ekadashi",
-    date: "aug 08",
+    date: "aug 8",
   },
   {
     title: "Aja Ekadashi",
@@ -68,7 +68,7 @@ const EKADASHIS = [
   },
   {
     title: "Jal Jhilani Ekadashi",
-    date: "sep 09",
+    date: "sep 9",
   },
   {
     title: "Indira Ekadashi",
@@ -76,7 +76,7 @@ const EKADASHIS = [
   },
   {
     title: "Pashankusha Ekadashi",
-    date: "oct 06",
+    date: "oct 6",
   },
   {
     title: "Rama Ekadashi",
@@ -84,19 +84,19 @@ const EKADASHIS = [
   },
   {
     title: "Prabodhini Ekadashi",
-    date: "nov 04, 2021",
+    date: "nov 4",
   },
   {
     title: "Uttpatti Ekadashi",
-    date: "nov 20, 2021",
+    date: "nov 20",
   },
   {
     title: "Mokshada Ekadashi - Geeta Jayanti",
-    date: "dec 04, 2021",
+    date: "dec 4",
   },
   {
     title: "Safala Ekadashi",
-    date: "dec 19, 2021",
+    date: "dec 19",
   },
 ]
 
