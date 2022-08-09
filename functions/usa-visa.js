@@ -1,31 +1,134 @@
 const nodemailer = require("nodemailer")
 const request = require("request")
+const chromium = require("chrome-aws-lambda")
+const puppeteer = require("puppeteer-core")
 
 exports.handler = async function (event) {
   const transporter = nodemailer.createTransport(
     `smtps://${process.env.NODEMAILER_USER}:${process.env.NODEMAILER_PASSWORD}@${process.env.NODEMAILER_HOST}`
   )
 
-  let toronto = JSON.parse(event.queryStringParameters.toronto)
-  toronto = toronto.map(item => item.date)
+  let executablePath = await chromium.executablePath
+  if (process.env.NODE_ENV === "development") {
+    executablePath = process.env.CHROME_EXECUTABLE_PATH
+  }
 
-  let calgary = JSON.parse(event.queryStringParameters.calgary)
-  calgary = calgary.map(item => item.date)
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    executablePath,
+    headless: chromium.headless,
+  })
 
-  let halifax = JSON.parse(event.queryStringParameters.halifax)
-  halifax = halifax.map(item => item.date)
+  const page = await browser.newPage()
+  await page.goto("https://ais.usvisa-info.com/en-ca/niv/users/sign_in")
+  await page.waitForSelector("#user_email")
+  await page.waitForSelector("#user_password")
+  await page.waitForSelector("#policy_confirmed")
+  await page.type("#user_email", "shreejissoni@outlook.com")
+  await page.type("#user_password", "ilove0S@")
+  await page.evaluate(() => {
+    document.querySelector("#policy_confirmed").click()
+  })
+  await page.evaluate(() => {
+    document.querySelector("input[type='submit']").click()
+  })
+  await page.waitForSelector("[role='menuitem'] > .button.primary.small")
+  // await page.evaluate(() => {
+  //   document.querySelector("[role='menuitem'] > .button.primary.small").click()
+  // })
+  // await page.waitForSelector(".fa-calendar-minus")
+  // await page.evaluate(() => {
+  //   document.querySelector(".fa-calendar-minus").parentElement.parentElement.click()
+  // })
+  // await page.evaluate(() => {
+  //   document.querySelector(".fa-calendar-minus").parentElement.parentElement.nextElementSibling.querySelector("a").click()
+  // })
 
-  let montreal = JSON.parse(event.queryStringParameters.montreal)
-  montreal = montreal.map(item => item.date)
+  // Calgary
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/89.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const calData = await page.$eval("body > pre", e => e.innerText)
+  const calJson = JSON.parse(calData)
+  let calgary = calJson.map(item => item.date)
+  if (calgary.length <= 0) {
+    calgary = ["No dates available"]
+  }
 
-  let ottawa = JSON.parse(event.queryStringParameters.ottawa)
-  ottawa = ottawa.map(item => item.date)
+  // Halifax
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/90.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const halData = await page.$eval("body > pre", e => e.innerText)
+  const halJson = JSON.parse(halData)
+  let halifax = halJson.map(item => item.date)
+  if (halifax.length <= 0) {
+    halifax = ["No dates available"]
+  }
 
-  let quebec = JSON.parse(event.queryStringParameters.quebec)
-  quebec = quebec.map(item => item.date)
+  // Montreal
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/91.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const monData = await page.$eval("body > pre", e => e.innerText)
+  const monJson = JSON.parse(monData)
+  let montreal = monJson.map(item => item.date)
+  if (montreal.length <= 0) {
+    montreal = ["No dates available"]
+  }
 
-  let vancouver = JSON.parse(event.queryStringParameters.vancouver)
-  vancouver = vancouver.map(item => item.date)
+  // Ottawa
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/92.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const ottData = await page.$eval("body > pre", e => e.innerText)
+  const ottJson = JSON.parse(ottData)
+  let ottawa = ottJson.map(item => item.date)
+  if (ottawa.length <= 0) {
+    ottawa = ["No dates available"]
+  }
+
+  // Quebec
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/93.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const queData = await page.$eval("body > pre", e => e.innerText)
+  const queJson = JSON.parse(queData)
+  let quebec = queJson.map(item => item.date)
+  if (quebec.length <= 0) {
+    quebec = ["No dates available"]
+  }
+
+  // Toronto
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/94.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const torData = await page.$eval("body > pre", e => e.innerText)
+  const torJson = JSON.parse(torData)
+  let toronto = torJson.map(item => item.date)
+  if (toronto.length <= 0) {
+    toronto = ["No dates available"]
+  }
+
+  // Vancouver
+  await page.goto(
+    "https://ais.usvisa-info.com/en-ca/niv/schedule/41501222/appointment/days/95.json?appointments[expedite]=false"
+  )
+  await page.waitForSelector("body > pre")
+  const vanData = await page.$eval("body > pre", e => e.innerText)
+  const vanJson = JSON.parse(vanData)
+  let vancouver = vanJson.map(item => item.date)
+  if (vancouver.length <= 0) {
+    vancouver = ["No dates available"]
+  }
+
+  await browser.close()
 
   return await sendNotification(
     toronto,
@@ -76,14 +179,24 @@ function sendNotification(
       const data = {
         chat_id: process.env.TELEGRAM_GROUP_ID_US,
         parse_mode: "HTML",
-        text: `<strong>📅 US Visa dates available are</strong>
-          \n<strong>Toronto</strong>\n${toronto.toString().replace(",", ", ")}
-          \n<strong>Calgary</strong>\n${calgary.toString()}
-          \n<strong>Halifax</strong>\n${halifax.toString()}
-          \n<strong>Montreal</strong>\n${montreal.toString()}
-          \n<strong>Ottawa</strong>\n${ottawa.toString()}
-          \n<strong>Quebec</strong>\n${quebec.toString()}
-          \n<strong>Vancouver</strong>\n${vancouver.toString()}`,
+        text: `<strong>📅 Available USA B1/B2 visa dates are</strong>
+          \n<strong>Toronto</strong>\n${toronto
+            .toString()
+            .replaceAll(",", ",\n")}
+          \n<strong>Calgary</strong>\n${calgary
+            .toString()
+            .replaceAll(",", ",\n")}
+          \n<strong>Halifax</strong>\n${halifax
+            .toString()
+            .replaceAll(",", ",\n")}
+          \n<strong>Montreal</strong>\n${montreal
+            .toString()
+            .replaceAll(",", ",\n")}
+          \n<strong>Ottawa</strong>\n${ottawa.toString().replaceAll(",", ",\n")}
+          \n<strong>Quebec</strong>\n${quebec.toString().replaceAll(",", ",\n")}
+          \n<strong>Vancouver</strong>\n${vancouver
+            .toString()
+            .replaceAll(",", ",\n")}`,
       }
 
       request(
