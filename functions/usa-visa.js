@@ -1,19 +1,17 @@
 const nodemailer = require("nodemailer")
 const request = require("request")
 const chromium = require("chrome-aws-lambda")
-const puppeteer = require("puppeteer-core")
 
-exports.handler = async function (event) {
+exports.handler = async function () {
   const transporter = nodemailer.createTransport(
     `smtps://${process.env.NODEMAILER_USER}:${process.env.NODEMAILER_PASSWORD}@${process.env.NODEMAILER_HOST}`
   )
 
-  let executablePath = await chromium.executablePath
-  if (process.env.NODE_ENV === "development") {
-    executablePath = process.env.CHROME_EXECUTABLE_PATH
-  }
+  const executablePath = process.env.NODE_ENV === "development"
+    ? process.env.CHROME_EXECUTABLE_PATH
+    : await chromium.executablePath
 
-  const browser = await puppeteer.launch({
+  const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     executablePath,
     headless: chromium.headless,
