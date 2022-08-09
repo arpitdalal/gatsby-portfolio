@@ -31,16 +31,6 @@ exports.handler = async function () {
     document.querySelector("input[type='submit']").click()
   })
   await page.waitForSelector("[role='menuitem'] > .button.primary.small")
-  // await page.evaluate(() => {
-  //   document.querySelector("[role='menuitem'] > .button.primary.small").click()
-  // })
-  // await page.waitForSelector(".fa-calendar-minus")
-  // await page.evaluate(() => {
-  //   document.querySelector(".fa-calendar-minus").parentElement.parentElement.click()
-  // })
-  // await page.evaluate(() => {
-  //   document.querySelector(".fa-calendar-minus").parentElement.parentElement.nextElementSibling.querySelector("a").click()
-  // })
 
   // Calgary
   await page.goto(
