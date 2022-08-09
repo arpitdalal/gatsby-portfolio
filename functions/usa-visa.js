@@ -24,8 +24,8 @@ exports.handler = async function (event) {
   await page.waitForSelector("#user_email")
   await page.waitForSelector("#user_password")
   await page.waitForSelector("#policy_confirmed")
-  await page.type("#user_email", "shreejissoni@outlook.com")
-  await page.type("#user_password", "ilove0S@")
+  await page.type("#user_email", process.env.AIS_USERNAME)
+  await page.type("#user_password", process.env.AIS_PASSWORD)
   await page.evaluate(() => {
     document.querySelector("#policy_confirmed").click()
   })
