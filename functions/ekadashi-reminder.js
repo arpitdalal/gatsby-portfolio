@@ -68,7 +68,7 @@ const EKADASHIS = [
   },
   {
     title: "Jal Jhilani Ekadashi",
-    date: "sep 9",
+    date: "sep 7",
   },
   {
     title: "Indira Ekadashi",
