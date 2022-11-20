@@ -108,8 +108,11 @@ exports.handler = async function () {
   const todaysDate = new Date()
   const currentMonth = todaysDate.toLocaleString("en-US", {
     month: "short",
+    timeZone: "America/New_York",
   })
-  const currentDay = todaysDate.getDate()
+  const currentDay = todaysDate.toLocaleString("en-US", {
+    timeZone: "America/New_York",
+  }).getDate()
   const currentDate = `${currentMonth} ${currentDay}`
 
   if (EKADASHIS.length === 0) {
