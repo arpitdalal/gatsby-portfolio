@@ -110,9 +110,7 @@ exports.handler = async function () {
     month: "short",
     timeZone: "America/New_York",
   })
-  const currentDay = todaysDate.toLocaleString("en-US", {
-    timeZone: "America/New_York",
-  }).getDate()
+  const currentDay = todaysDate.getDate()
   const currentDate = `${currentMonth} ${currentDay}`
 
   if (EKADASHIS.length === 0) {
