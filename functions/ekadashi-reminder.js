@@ -110,9 +110,12 @@ exports.handler = async function () {
     month: "short",
     timeZone: "America/New_York",
   })
-  const currentDay = todaysDate.getDate()
+  const currentDay = todaysDate.toLocaleString("en-US", {
+    day: "numeric",
+    timeZone: "America/New_York",
+  })
   const currentDate = `${currentMonth} ${currentDay}`
-  console.log(todaysDate)
+  console.log(currentDate)
 
   if (EKADASHIS.length === 0) {
     const messageOptions = {
