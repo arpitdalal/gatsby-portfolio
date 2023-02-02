@@ -4,100 +4,104 @@ const request = require("request")
 const EKADASHIS = [
   {
     title: "Putrada Ekadashi",
-    date: "jan 13",
+    date: "jan 2",
   },
   {
     title: "Shattila Ekadashi",
-    date: "jan 28",
+    date: "jan 18",
   },
   {
     title: "Jaya Ekadashi",
-    date: "feb 12",
+    date: "feb 1",
   },
   {
     title: "Vijaya Ekadashi",
-    date: "feb 27",
+    date: "feb 16",
   },
   {
     title: "Amalki Ekadashi",
-    date: "mar 14",
+    date: "mar 3",
   },
   {
     title: "Papmochani Ekadashi",
-    date: "mar 28",
+    date: "mar 18",
   },
   {
     title: "Kamda Ekadashi",
-    date: "apr 12",
+    date: "apr 1",
   },
   {
     title: "Varuthini Ekadashi",
-    date: "apr 26",
+    date: "apr 16",
   },
   {
     title: "Mohini Ekadashi",
-    date: "may 12",
+    date: "may 1",
   },
   {
     title: "Apara Ekadashi",
-    date: "may 26",
+    date: "may 15",
   },
   {
     title: "Bhim Ekadashi",
-    date: "jun 11",
+    date: "may 31",
   },
   {
     title: "Yogini Ekadashi",
-    date: "jun 24",
+    date: "jun 14",
   },
   {
     title: "Devshayani Ekadashi-Niyami Ekadashi",
-    date: "jul 10",
+    date: "jun 29",
   },
   {
     title: "Kamika Ekadashi",
-    date: "jul 24",
+    date: "jul 13",
+  },
+  {
+    title: "Kamala Ekadashi",
+    date: "jul 29",
+  },
+  {
+    title: "Kamala Ekadashi",
+    date: "aug 12",
   },
   {
     title: "Pavitra Ekadashi",
-    date: "aug 8",
+    date: "aug 27",
   },
   {
     title: "Aja Ekadashi",
-    date: "aug 23",
+    date: "sep 10",
   },
   {
     title: "Jal Jhilani Ekadashi",
-    date: "sep 7",
+    date: "sep 25",
   },
   {
     title: "Indira Ekadashi",
-    date: "sep 21",
+    date: "oct 10",
   },
   {
     title: "Pashankusha Ekadashi",
-    date: "oct 6",
+    date: "oct 25",
   },
   {
     title: "Rama Ekadashi",
-    date: "oct 21",
+    date: "nov 9",
   },
   {
     title: "Prabodhini Ekadashi",
-    date: "nov 4",
+    date: "nov 23",
   },
   {
     title: "Uttpatti Ekadashi",
-    date: "nov 20",
+    date: "dec 9",
   },
   {
-    title: "Mokshada Ekadashi - Geeta Jayanti",
-    date: "dec 4",
-  },
-  {
-    title: "Safala Ekadashi",
-    date: "dec 19",
-  },
+    title: "Mokshada Ekadashi",
+    date: "dec 23",
+  }
 ]
 
 const transporter = nodemailer.createTransport(
