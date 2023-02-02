@@ -112,6 +112,7 @@ exports.handler = async function () {
   })
   const currentDay = todaysDate.getDate()
   const currentDate = `${currentMonth} ${currentDay}`
+  console.log(todaysDate)
 
   if (EKADASHIS.length === 0) {
     const messageOptions = {
