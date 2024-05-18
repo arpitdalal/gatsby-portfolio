@@ -40,7 +40,7 @@ const EKADASHIS = [
   },
   {
     title: "Mohini Ekadashi",
-    date: "may 18",
+    date: "may 19",
   },
   {
     title: "Apara Ekadashi",
