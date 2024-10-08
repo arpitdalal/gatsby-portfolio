@@ -4,10 +4,7 @@ import React, { useState } from "react"
 
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import {
-  Nav,
-  Navbar,
-} from "react-bootstrap"
+import { Nav, Navbar } from "react-bootstrap"
 
 import ToggleDesktop from "./toggleDesktop"
 import ToggleMobile from "./toggleMobile"
@@ -85,6 +82,16 @@ const Header = ({ setTheme }) => {
                     to="/resume"
                   >
                     Resume
+                  </Link>
+                </Nav.Link>
+                <Nav.Link as="li">
+                  <Link
+                    className="nav-link-mb m-0 w-100 d-block"
+                    activeClassName="active"
+                    to="https://arpit.im/blog"
+                    target="_blank"
+                  >
+                    Blog
                   </Link>
                 </Nav.Link>
                 <div className="p-0 mx-0 bmc-btn-container">
@@ -303,6 +310,15 @@ const Header = ({ setTheme }) => {
                 to="/resume"
               >
                 My Resume
+              </Link>
+              <Link
+                className="nav-link anim"
+                activeClassName="active"
+                role="tab"
+                to="https://arpit.im/blog"
+                target="_blank"
+              >
+                My Blog
               </Link>
               <div className="bmc-btn-container anim">
                 <a
