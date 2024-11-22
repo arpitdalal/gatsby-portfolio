@@ -5,103 +5,133 @@ const EKADASHIS = [
   {
     title: "Safala Ekadashi",
     date: "jan 7",
+    body: "🍇🍎🥗",
   },
   {
     title: "Putrada Ekadashi",
     date: "jan 21",
+    body: "🍇🍎🥗",
   },
   {
     title: "Shattila Ekadashi",
     date: "feb 6",
+    body: "🍇🍎🥗",
   },
   {
     title: "Jaya Ekadashi",
     date: "feb 20",
+    body: "🍇🍎🥗",
   },
   {
     title: "Vijaya Ekadashi",
     date: "mar 7",
+    body: "🍇🍎🥗",
   },
   {
     title: "Amalki Ekadashi",
     date: "mar 20",
+    body: "🍇🍎🥗",
   },
   {
     title: "Papmochani Ekadashi",
     date: "apr 5",
+    body: "🍇🍎🥗",
   },
   {
     title: "Kamda Ekadashi",
     date: "apr 19",
+    body: "🍇🍎🥗",
   },
   {
     title: "Varuthini Ekadashi",
     date: "may 4",
+    body: "🍇🍎🥗",
   },
   {
     title: "Mohini Ekadashi",
     date: "may 19",
+    body: "🍇🍎🥗",
   },
   {
     title: "Apara Ekadashi",
     date: "jun 3",
+    body: "🍇🍎🥗",
   },
   {
     title: "Bhim Ekadashi",
     date: "jun 18",
+    body: "🍇🍎🥗",
   },
   {
     title: "Yogini Ekadashi",
     date: "jul 2",
+    body: "🍇🍎🥗",
   },
   {
     title: "Devshayani Ekadashi-Niyami Ekadashi",
     date: "jul 17",
+    body: "🍇🍎🥗",
   },
   {
     title: "Kamika Ekadashi",
     date: "jul 31",
+    body: "🍇🍎🥗",
   },
   {
     title: "Pavitra Ekadashi",
     date: "aug 16",
+    body: "🍇🍎🥗",
   },
   {
     title: "Aja Ekadashi",
     date: "aug 29",
+    body: "🍇🍎🥗",
+  },
+  {
+    title: "Rushi Panchami",
+    date: "sep 8",
+    body: "Remember to change your janoi",
   },
   {
     title: "Jal Jhilani Ekadashi",
     date: "sep 14",
+    body: "🍇🍎🥗",
   },
   {
     title: "Indira Ekadashi",
     date: "sep 28",
+    body: "🍇🍎🥗",
   },
   {
     title: "Pashankusha Ekadashi",
     date: "oct 14",
+    body: "🍇🍎🥗",
   },
   {
     title: "Rama Ekadashi",
     date: "oct 28",
+    body: "🍇🍎🥗",
   },
   {
     title: "Prabodhini Ekadashi",
     date: "nov 12",
+    body: "🍇🍎🥗",
   },
   {
     title: "Uttpatti Ekadashi",
     date: "nov 26",
+    body: "🍇🍎🥗",
   },
   {
     title: "Mokshada Ekadashi",
     date: "dec 11",
+    body: "🍇🍎🥗",
   },
   {
     title: "Safala Ekadashi",
     date: "dec 26",
-  }
+    body: "🍇🍎🥗",
+  },
 ]
 
 const transporter = nodemailer.createTransport(
@@ -186,9 +216,9 @@ function sendNotification(ekadashi) {
         parse_mode: "HTML",
         text: `📅 <strong>Reminder</strong>\nToday - <strong>${capitalize(
           ekadashi.date
-        )}</strong> is <strong><i>${capitalize(
-          ekadashi.title
-        )}</i></strong> 🍇🍎🥗`,
+        )}</strong> is <strong><i>${capitalize(ekadashi.title)}</i></strong> ${
+          ekadashi.body
+        }`,
       }
 
       request(
