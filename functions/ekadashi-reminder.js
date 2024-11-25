@@ -88,6 +88,11 @@ const EKADASHIS = [
     body: "🍇🍎🥗",
   },
   {
+    title: "Rushi Panchami in next week",
+    date: "sep 1",
+    body: "Remember to get a new janoi to change on Rushi Panchami (Sep 8)",
+  },
+  {
     title: "Rushi Panchami",
     date: "sep 8",
     body: "Remember to change your janoi",
