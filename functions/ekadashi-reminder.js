@@ -134,7 +134,7 @@ const EKADASHIS = [
   },
   {
     title: "Putrada Ekadashi",
-    date: "dec 31",
+    date: "dec 30",
     body: "🍇🍎🥗",
   },
 ]
