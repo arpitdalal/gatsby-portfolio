@@ -90,7 +90,7 @@ const EKADASHIS = [
   {
     title: "Rushi Panchami in next week",
     date: "sep 13",
-    body: "Remember to get a new janoi to change on Rushi Panchami (Aug 28)",
+    body: "Remember to get a new janoi to change on Rushi Panchami (Sep 15)",
   },
   {
     title: "Rushi Panchami",
