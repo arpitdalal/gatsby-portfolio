@@ -3,11 +3,6 @@ const request = require("request")
 
 const EKADASHIS = [
   {
-    title: "Putrada Ekadashi",
-    date: "jan 10",
-    body: "🍇🍎🥗",
-  },
-  {
     title: "Shattila Ekadashi",
     date: "jan 14",
     body: "🍇🍎🥗",
